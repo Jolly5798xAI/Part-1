@@ -1,0 +1,76 @@
+[Script Info]
+Title: ЦЕНА ВЫБОРА — EP01
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Inter,74,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,-1,0,0,0,100,100,0,0,1,5,2,2,110,170,500,204
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.12,0:00:00.92,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}Мне заплатили
+Dialogue: 0,0:00:00.92,0:00:01.72,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}{\c&HFFD39C&}500{\c&HFFFFFF&} {\c&HFFD39C&}долларов{\c&HFFFFFF&}
+Dialogue: 0,0:00:01.72,0:00:02.95,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}за стакан воды
+Dialogue: 0,0:00:02.95,0:00:03.71,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}А через минуту
+Dialogue: 0,0:00:03.71,0:00:04.51,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}кто-то попытался
+Dialogue: 0,0:00:04.51,0:00:05.88,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}{\c&H4F4AFF&}выломать{\c&HFFFFFF&} мою дверь
+Dialogue: 0,0:00:05.88,0:00:06.52,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}Всё началось
+Dialogue: 0,0:00:06.52,0:00:07.92,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}с сообщения без номера
+Dialogue: 0,0:00:07.92,0:00:08.76,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}«Поставь полный
+Dialogue: 0,0:00:08.76,0:00:09.76,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}стакан у входа
+Dialogue: 0,0:00:09.76,0:00:11.87,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}Время — {\c&HFFD39C&}60{\c&HFFFFFF&} {\c&HFFD39C&}секунд»{\c&HFFFFFF&}
+Dialogue: 0,0:00:11.87,0:00:12.35,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}Я решил
+Dialogue: 0,0:00:12.35,0:00:13.39,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}что это мошенники
+Dialogue: 0,0:00:13.39,0:00:14.63,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}Но в сообщении были
+Dialogue: 0,0:00:14.63,0:00:15.99,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}моё имя и адрес
+Dialogue: 0,0:00:15.99,0:00:17.39,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}Я поставил стакан
+Dialogue: 0,0:00:17.39,0:00:18.67,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}Телефон завибрировал
+Dialogue: 0,0:00:18.67,0:00:19.51,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}На счёт пришли
+Dialogue: 0,0:00:19.51,0:00:20.51,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}{\c&HFFD39C&}500{\c&HFFFFFF&} {\c&HFFD39C&}долларов{\c&HFFFFFF&}
+Dialogue: 0,0:00:20.51,0:00:21.51,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}Следующее задание
+Dialogue: 0,0:00:21.51,0:00:23.11,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}стоило уже {\c&HFFD39C&}две{\c&HFFFFFF&} {\c&HFFD39C&}тысячи{\c&HFFFFFF&}
+Dialogue: 0,0:00:23.11,0:00:23.79,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}«Не открывай
+Dialogue: 0,0:00:23.79,0:00:25.30,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}дверь {\c&HFFD39C&}три{\c&HFFFFFF&} {\c&HFFD39C&}минуты»{\c&HFFFFFF&}
+Dialogue: 0,0:00:25.71,0:00:26.59,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}В ту же секунду
+Dialogue: 0,0:00:26.59,0:00:27.59,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}раздался {\c&H4F4AFF&}стук{\c&HFFFFFF&}
+Dialogue: 0,0:00:27.59,0:00:28.55,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}Мужчина за дверью
+Dialogue: 0,0:00:28.55,0:00:29.91,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}представился полицейским
+Dialogue: 0,0:00:29.91,0:00:30.51,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}Он кричал
+Dialogue: 0,0:00:30.51,0:00:31.91,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}что в доме утечка {\c&H4F4AFF&}газа{\c&HFFFFFF&}
+Dialogue: 0,0:00:31.91,0:00:33.43,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}и нужно срочно выходить
+Dialogue: 0,0:00:33.43,0:00:34.83,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}Я посмотрел в глазок
+Dialogue: 0,0:00:34.83,0:00:36.07,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}Полицейский действительно
+Dialogue: 0,0:00:36.07,0:00:36.83,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}был в форме
+Dialogue: 0,0:00:36.83,0:00:38.07,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}Но рядом с ним стоял
+Dialogue: 0,0:00:38.07,0:00:39.19,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}ещё один человек
+Dialogue: 0,0:00:39.19,0:00:40.38,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}{\c&H4F4AFF&}лицом к стене{\c&HFFFFFF&}
+Dialogue: 0,0:00:40.38,0:00:41.90,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}Я потянулся к замку
+Dialogue: 0,0:00:41.90,0:00:43.52,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}Телефон загорелся
+Dialogue: 0,0:00:43.76,0:00:45.64,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}«Откроешь — {\c&H4F4AFF&}погибнешь»{\c&HFFFFFF&}
+Dialogue: 0,0:00:45.64,0:00:46.88,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}Я отдёрнул руку
+Dialogue: 0,0:00:46.88,0:00:47.80,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}Снаружи начали
+Dialogue: 0,0:00:47.80,0:00:48.77,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}{\c&H4F4AFF&}бить{\c&HFFFFFF&} в дверь
+Dialogue: 0,0:00:48.77,0:00:50.09,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}Я спросил полицейского
+Dialogue: 0,0:00:50.09,0:00:51.65,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}как зовут моего соседа
+Dialogue: 0,0:00:51.65,0:00:52.96,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}Он {\c&H4F4AFF&}замолчал{\c&HFFFFFF&}
+Dialogue: 0,0:00:53.08,0:00:53.64,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}А человек
+Dialogue: 0,0:00:53.64,0:00:54.84,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}у стены медленно
+Dialogue: 0,0:00:54.84,0:00:56.26,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}повернул голову
+Dialogue: 0,0:00:56.74,0:00:59.04,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}У него было {\c&H4F4AFF&}моё лицо{\c&HFFFFFF&}
+Dialogue: 0,0:00:59.16,0:01:00.48,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}Я отступил от двери
+Dialogue: 0,0:01:00.48,0:01:01.52,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}{\c&H4F4AFF&}Двойник{\c&HFFFFFF&} приложил
+Dialogue: 0,0:01:01.52,0:01:02.96,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}к глазку {\c&H4F4AFF&}окровавленную{\c&HFFFFFF&}
+Dialogue: 0,0:01:02.96,0:01:04.28,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}{\c&H4F4AFF&}ладонь,{\c&HFFFFFF&} а затем
+Dialogue: 0,0:01:04.28,0:01:06.20,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}беззвучно произнёс:
+Dialogue: 0,0:01:06.21,0:01:07.86,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}«{\c&H4F4AFF&}Не верь телефону{\c&HFFFFFF&}»
+Dialogue: 0,0:01:07.87,0:01:08.95,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}В этот момент пришло
+Dialogue: 0,0:01:08.95,0:01:10.11,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}новое сообщение:
+Dialogue: 0,0:01:10.11,0:01:11.03,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}«{\c&H4F4AFF&}Открой дверь{\c&HFFFFFF&}
+Dialogue: 0,0:01:11.03,0:01:12.91,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}Осталось {\c&HFFD39C&}10{\c&HFFFFFF&} {\c&HFFD39C&}секунд»{\c&HFFFFFF&}
+Dialogue: 0,0:01:12.91,0:01:14.03,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}И тут я услышал
+Dialogue: 0,0:01:14.03,0:01:14.91,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}как кто-то начал
+Dialogue: 0,0:01:14.91,0:01:16.73,Sub,,0,0,0,,{\fad(50,0)\fscx94\fscy94\t(0,90,\fscx100\fscy100)}открывать замок {\c&H4F4AFF&}снаружи{\c&HFFFFFF&}

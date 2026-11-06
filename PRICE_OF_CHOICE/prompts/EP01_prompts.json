@@ -1,0 +1,615 @@
+{
+ "style": "photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+ "negative": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+ "shots": [
+  {
+   "shot": "S01_A",
+   "scene": 1,
+   "duration_s": 0.92,
+   "frames": 22,
+   "prompt": "extreme close-up, low angle at floor level: a classic faceted Soviet glass tumbler (granyonyi stakan) filled to the brim with clear water standing on grey ceramic tiles right at the threshold of a closed dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door; the thin cold light from under the door glints in the water and the glass facets; the water surface trembles very slightly. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "locations/PROPS.md#glass",
+    "locations/ENTRANCE_DOOR.md",
+    "locations/APARTMENT_HALLWAY.md"
+   ],
+   "camera": "slow push-in 4%, locked tripod",
+   "lighting": "only the cold strip of light under the door, faint blue fill from behind",
+   "continuity": [
+    "classic faceted Soviet glass tumbler (granyonyi stakan) filled to the brim with clear water",
+    "dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door",
+    "narrow entrance hall of an ordinary Moscow panel-building flat: grey ceramic floor tiles, beige textured wallpaper, low oak-veneer shoe cabinet on the LEFT wall with a round frameless mirror above it, kitchen doorway at the far end letting in faint cold-blue streetlight, ceiling light OFF"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S01_A.mp4"
+  },
+  {
+   "shot": "S01_C",
+   "scene": 1,
+   "duration_s": 1.19,
+   "frames": 29,
+   "prompt": "low angle from the floor: the classic faceted Soviet glass tumbler (granyonyi stakan) filled to the brim with clear water sharp in the foreground, the closed dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door soft-focus behind it, cold light strip under the door, the rest of the narrow entrance hall of an ordinary Moscow panel-building flat: grey ceramic floor tiles, beige textured wallpaper, low oak-veneer shoe cabinet on the LEFT wall with a round frameless mirror above it, kitchen doorway at the far end letting in faint cold-blue streetlight, ceiling light OFF falling into darkness. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "locations/PROPS.md#glass",
+    "locations/ENTRANCE_DOOR.md",
+    "locations/APARTMENT_HALLWAY.md"
+   ],
+   "camera": "very slow lateral slide left 3%",
+   "lighting": "cold under-door light, deep shadows",
+   "continuity": [
+    "classic faceted Soviet glass tumbler (granyonyi stakan) filled to the brim with clear water",
+    "dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door",
+    "narrow entrance hall of an ordinary Moscow panel-building flat: grey ceramic floor tiles, beige textured wallpaper, low oak-veneer shoe cabinet on the LEFT wall with a round frameless mirror above it, kitchen doorway at the far end letting in faint cold-blue streetlight, ceiling light OFF"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S01_C.mp4"
+  },
+  {
+   "shot": "S01_D",
+   "scene": 1,
+   "duration_s": 2.85,
+   "frames": 68,
+   "prompt": "close-up of the brushed-chrome lever handle and thumb-turn of the dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door from inside the dark hall; the handle is violently yanked down from outside and snaps back, the whole door shudders in its frame, a little dust falls from the frame. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "locations/ENTRANCE_DOOR.md",
+    "locations/APARTMENT_HALLWAY.md"
+   ],
+   "camera": "locked, micro handheld only on the impacts",
+   "lighting": "cold under-door light, faint blue fill",
+   "continuity": [
+    "dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door",
+    "narrow entrance hall of an ordinary Moscow panel-building flat: grey ceramic floor tiles, beige textured wallpaper, low oak-veneer shoe cabinet on the LEFT wall with a round frameless mirror above it, kitchen doorway at the far end letting in faint cold-blue streetlight, ceiling light OFF"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S01_D.mp4"
+  },
+  {
+   "shot": "S02_A",
+   "scene": 2,
+   "duration_s": 2.1,
+   "frames": 51,
+   "prompt": "first-person POV: a young man's right hand, lean, short clean nails, thin black braided cord bracelet on the right wrist, sleeve of a charcoal-grey cotton hoodie holding a black unbranded smartphone with thin bezels, dark-mode screen at chest height in the dark narrow entrance hall of an ordinary Moscow panel-building flat: grey ceramic floor tiles, beige textured wallpaper, low oak-veneer shoe cabinet on the LEFT wall with a round frameless mirror above it, kitchen doorway at the far end letting in faint cold-blue streetlight, ceiling light OFF; for a moment the black screen reflects the face of ALEX (see reference) dimly, then the screen lights up and the reflection disappears in the glow; screen content left plain for compositing. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "characters/ALEX_character_bible.md#reference-sheet",
+    "locations/PROPS.md#phone",
+    "locations/APARTMENT_HALLWAY.md"
+   ],
+   "camera": "POV handheld, natural breathing micro-motion",
+   "lighting": "phone screen glow on the hand, cold blue ambience",
+   "continuity": [
+    "black unbranded smartphone with thin bezels, dark-mode screen",
+    "narrow entrance hall of an ordinary Moscow panel-building flat: grey ceramic floor tiles, beige textured wallpaper, low oak-veneer shoe cabinet on the LEFT wall with a round frameless mirror above it, kitchen doorway at the far end letting in faint cold-blue streetlight, ceiling light OFF",
+    "Phone screen plain, UI composited later: assets/ui/screens/screen_incoming.png"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S02_A.mp4"
+  },
+  {
+   "shot": "S02_C",
+   "scene": 2,
+   "duration_s": 1.6,
+   "frames": 39,
+   "prompt": "over-the-shoulder shot from behind ALEX (only shoulder, ear and messy short dark-brown hair visible, face not shown) holding the black unbranded smartphone with thin bezels, dark-mode screen in the dark narrow entrance hall of an ordinary Moscow panel-building flat: grey ceramic floor tiles, beige textured wallpaper, low oak-veneer shoe cabinet on the LEFT wall with a round frameless mirror above it, kitchen doorway at the far end letting in faint cold-blue streetlight, ceiling light OFF; his thumb hovers over the screen, hesitating; the dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door is a dark shape beyond. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "characters/ALEX_character_bible.md#reference-sheet",
+    "locations/PROPS.md#phone",
+    "locations/APARTMENT_HALLWAY.md",
+    "locations/ENTRANCE_DOOR.md"
+   ],
+   "camera": "slow push-in 3%",
+   "lighting": "phone glow rim light, cold ambience",
+   "continuity": [
+    "black unbranded smartphone with thin bezels, dark-mode screen",
+    "narrow entrance hall of an ordinary Moscow panel-building flat: grey ceramic floor tiles, beige textured wallpaper, low oak-veneer shoe cabinet on the LEFT wall with a round frameless mirror above it, kitchen doorway at the far end letting in faint cold-blue streetlight, ceiling light OFF",
+    "dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door",
+    "Phone screen plain, UI composited later: assets/ui/screens/screen_task1.png"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S02_C.mp4"
+  },
+  {
+   "shot": "S03_A",
+   "scene": 3,
+   "duration_s": 1.4,
+   "frames": 33,
+   "prompt": "close-up at floor level: a young man's right hand, lean, short clean nails, thin black braided cord bracelet on the right wrist, sleeve of a charcoal-grey cotton hoodie carefully sets the classic faceted Soviet glass tumbler (granyonyi stakan) filled to the brim with clear water down on the grey tiles at the threshold of the dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door; a single drop runs down the outside of the glass; the cold under-door light catches the water. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "characters/ALEX_character_bible.md#reference-sheet",
+    "locations/PROPS.md#glass",
+    "locations/ENTRANCE_DOOR.md"
+   ],
+   "camera": "locked, slight tilt-down following the glass",
+   "lighting": "cold under-door light, phone glow from above out of frame",
+   "continuity": [
+    "classic faceted Soviet glass tumbler (granyonyi stakan) filled to the brim with clear water",
+    "dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S03_A.mp4"
+  },
+  {
+   "shot": "S03_B",
+   "scene": 3,
+   "duration_s": 1.3,
+   "frames": 32,
+   "prompt": "close-up: the black unbranded smartphone with thin bezels, dark-mode screen lying face-up on the oak-veneer shoe cabinet of the narrow entrance hall of an ordinary Moscow panel-building flat: grey ceramic floor tiles, beige textured wallpaper, low oak-veneer shoe cabinet on the LEFT wall with a round frameless mirror above it, kitchen doorway at the far end letting in faint cold-blue streetlight, ceiling light OFF, vibrating and slowly creeping across the wood; its screen lights up and throws cold light on the round mirror above; screen left plain for compositing. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "locations/PROPS.md#phone",
+    "locations/APARTMENT_HALLWAY.md"
+   ],
+   "camera": "locked, shallow depth of field",
+   "lighting": "phone screen glow only",
+   "continuity": [
+    "black unbranded smartphone with thin bezels, dark-mode screen",
+    "narrow entrance hall of an ordinary Moscow panel-building flat: grey ceramic floor tiles, beige textured wallpaper, low oak-veneer shoe cabinet on the LEFT wall with a round frameless mirror above it, kitchen doorway at the far end letting in faint cold-blue streetlight, ceiling light OFF",
+    "Phone screen plain, UI composited later: assets/ui/screens/screen_bank.png"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S03_B.mp4"
+  },
+  {
+   "shot": "S05_A",
+   "scene": 5,
+   "duration_s": 2.66,
+   "frames": 63,
+   "prompt": "first-person medium shot down the dark narrow entrance hall of an ordinary Moscow panel-building flat: grey ceramic floor tiles, beige textured wallpaper, low oak-veneer shoe cabinet on the LEFT wall with a round frameless mirror above it, kitchen doorway at the far end letting in faint cold-blue streetlight, ceiling light OFF toward the closed dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door; the classic faceted Soviet glass tumbler (granyonyi stakan) filled to the brim with clear water stands at its foot; the door shudders under heavy knocks, rings ripple across the water in the glass; two shadows of feet move in the light strip under the door. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "locations/APARTMENT_HALLWAY.md",
+    "locations/ENTRANCE_DOOR.md",
+    "locations/PROPS.md#glass"
+   ],
+   "camera": "POV, locked with tiny breathing motion",
+   "lighting": "cold under-door strip, blue streetlight spill from the kitchen behind",
+   "continuity": [
+    "narrow entrance hall of an ordinary Moscow panel-building flat: grey ceramic floor tiles, beige textured wallpaper, low oak-veneer shoe cabinet on the LEFT wall with a round frameless mirror above it, kitchen doorway at the far end letting in faint cold-blue streetlight, ceiling light OFF",
+    "dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door",
+    "classic faceted Soviet glass tumbler (granyonyi stakan) filled to the brim with clear water"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S05_A.mp4"
+  },
+  {
+   "shot": "S05_B",
+   "scene": 5,
+   "duration_s": 2.35,
+   "frames": 57,
+   "prompt": "close-up of the inside of the dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door: lock cylinder, thumb-turn and the peephole glowing as a tiny cold point of light; the door vibrates slightly with muffled fist knocks from outside. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "locations/ENTRANCE_DOOR.md"
+   ],
+   "camera": "slow tilt up from the lock to the peephole",
+   "lighting": "peephole point light, under-door strip",
+   "continuity": [
+    "dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S05_B.mp4"
+  },
+  {
+   "shot": "S05_C",
+   "scene": 5,
+   "duration_s": 3.45,
+   "frames": 83,
+   "prompt": "first-person POV slowly walking toward the dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door through the narrow entrance hall of an ordinary Moscow panel-building flat: grey ceramic floor tiles, beige textured wallpaper, low oak-veneer shoe cabinet on the LEFT wall with a round frameless mirror above it, kitchen doorway at the far end letting in faint cold-blue streetlight, ceiling light OFF, his left hand (lean, no jewellery) sliding along the beige wallpaper; the peephole point of light grows closer. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "locations/APARTMENT_HALLWAY.md",
+    "locations/ENTRANCE_DOOR.md"
+   ],
+   "camera": "slow POV dolly forward, natural steps",
+   "lighting": "under-door strip and peephole point only",
+   "continuity": [
+    "narrow entrance hall of an ordinary Moscow panel-building flat: grey ceramic floor tiles, beige textured wallpaper, low oak-veneer shoe cabinet on the LEFT wall with a round frameless mirror above it, kitchen doorway at the far end letting in faint cold-blue streetlight, ceiling light OFF",
+    "dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S05_C.mp4"
+  },
+  {
+   "shot": "S05_D",
+   "scene": 5,
+   "duration_s": 1.4,
+   "frames": 33,
+   "prompt": "extreme close-up of the chrome peephole of the dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door at eye level, camera moving right up to the lens until the cold light inside the lens fills the frame. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "locations/ENTRANCE_DOOR.md"
+   ],
+   "camera": "push-in into the lens, ends on bright lens (match-cut to fisheye)",
+   "lighting": "cold light through the peephole",
+   "continuity": [
+    "dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S05_D.mp4"
+  },
+  {
+   "shot": "S05_E",
+   "scene": 5,
+   "duration_s": 2.05,
+   "frames": 49,
+   "prompt": "view through a door peephole, strong fisheye distortion, circular dark vignette: the POLICEMAN (see reference) in a plain dark-blue police-style uniform and cap, no readable insignia, standing close to the door in the stairwell landing of a Soviet panel building seen from inside the flat: walls painted pale green to shoulder height and whitewashed above, one flat fluorescent tube on the ceiling (steady, no flicker), beige-brown square floor tiles, a brown neighbour door straight across, a closed elevator door on the RIGHT, bare wall on the LEFT, looking straight into the peephole with a calm, flat, unblinking expression, mouth slightly open as if he just finished speaking. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "characters/POLICEMAN_character_bible.md",
+    "locations/STAIRWELL_CORRIDOR.md"
+   ],
+   "camera": "static fisheye, very slight lens breathing",
+   "lighting": "single steady fluorescent tube overhead, cold green-white",
+   "continuity": [
+    "stairwell landing of a Soviet panel building seen from inside the flat: walls painted pale green to shoulder height and whitewashed above, one flat fluorescent tube on the ceiling (steady, no flicker), beige-brown square floor tiles, a brown neighbour door straight across, a closed elevator door on the RIGHT, bare wall on the LEFT"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S05_E.mp4"
+  },
+  {
+   "shot": "S06_A",
+   "scene": 6,
+   "duration_s": 3.35,
+   "frames": 81,
+   "prompt": "same peephole fisheye view of the stairwell landing of a Soviet panel building seen from inside the flat: walls painted pale green to shoulder height and whitewashed above, one flat fluorescent tube on the ceiling (steady, no flicker), beige-brown square floor tiles, a brown neighbour door straight across, a closed elevator door on the RIGHT, bare wall on the LEFT: the POLICEMAN on the right half of the frame, and at the LEFT edge, partly lost in the vignette, a second man in a charcoal-grey hoodie stands completely still with his face to the green-painted wall, back to camera, arms hanging, head slightly bowed; nobody else. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "characters/POLICEMAN_character_bible.md",
+    "characters/DOUBLE_character_bible.md",
+    "locations/STAIRWELL_CORRIDOR.md"
+   ],
+   "camera": "very slow drift left 4% so the second man is discovered late",
+   "lighting": "same steady fluorescent tube",
+   "continuity": [
+    "stairwell landing of a Soviet panel building seen from inside the flat: walls painted pale green to shoulder height and whitewashed above, one flat fluorescent tube on the ceiling (steady, no flicker), beige-brown square floor tiles, a brown neighbour door straight across, a closed elevator door on the RIGHT, bare wall on the LEFT"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S06_A.mp4"
+  },
+  {
+   "shot": "S07_A",
+   "scene": 7,
+   "duration_s": 1.7,
+   "frames": 41,
+   "prompt": "close-up: a young man's right hand, lean, short clean nails, thin black braided cord bracelet on the right wrist, sleeve of a charcoal-grey cotton hoodie slowly reaching toward the chrome thumb-turn latch of the dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door; fingertips touch the cold metal. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "characters/ALEX_character_bible.md#reference-sheet",
+    "locations/ENTRANCE_DOOR.md"
+   ],
+   "camera": "locked, rack focus from latch to fingertips",
+   "lighting": "cold under-door and peephole light, skin neutral",
+   "continuity": [
+    "dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S07_A.mp4"
+  },
+  {
+   "shot": "S07_B",
+   "scene": 7,
+   "duration_s": 1.7,
+   "frames": 40,
+   "prompt": "the hand on the thumb-turn latch in the soft foreground, behind it on the shoe cabinet the black unbranded smartphone with thin bezels, dark-mode screen screen flares up bright; focus racks from the hand to the glowing phone. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "characters/ALEX_character_bible.md#reference-sheet",
+    "locations/ENTRANCE_DOOR.md",
+    "locations/PROPS.md#phone",
+    "locations/APARTMENT_HALLWAY.md"
+   ],
+   "camera": "rack focus hand -> phone",
+   "lighting": "sudden cold phone glow",
+   "continuity": [
+    "dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door",
+    "black unbranded smartphone with thin bezels, dark-mode screen",
+    "narrow entrance hall of an ordinary Moscow panel-building flat: grey ceramic floor tiles, beige textured wallpaper, low oak-veneer shoe cabinet on the LEFT wall with a round frameless mirror above it, kitchen doorway at the far end letting in faint cold-blue streetlight, ceiling light OFF",
+    "Phone screen plain, UI composited later: assets/ui/screens/screen_warning.png"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S07_B.mp4"
+  },
+  {
+   "shot": "S07_D",
+   "scene": 7,
+   "duration_s": 1.3,
+   "frames": 31,
+   "prompt": "close-up: a young man's right hand, lean, short clean nails, thin black braided cord bracelet on the right wrist, sleeve of a charcoal-grey cotton hoodie jerks back sharply from the thumb-turn latch of the dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door and leaves the frame, slight motion blur. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "characters/ALEX_character_bible.md#reference-sheet",
+    "locations/ENTRANCE_DOOR.md"
+   ],
+   "camera": "locked, natural motion blur",
+   "lighting": "cold",
+   "continuity": [
+    "dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S07_D.mp4"
+  },
+  {
+   "shot": "S07_E",
+   "scene": 7,
+   "duration_s": 1.9,
+   "frames": 46,
+   "prompt": "wide shot from inside the dark narrow entrance hall of an ordinary Moscow panel-building flat: grey ceramic floor tiles, beige textured wallpaper, low oak-veneer shoe cabinet on the LEFT wall with a round frameless mirror above it, kitchen doorway at the far end letting in faint cold-blue streetlight, ceiling light OFF: the dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door shakes violently in its frame under heavy blows from outside, dust drifts from the frame, the classic faceted Soviet glass tumbler (granyonyi stakan) filled to the brim with clear water at its foot shivers and a little water spills on the tiles. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "locations/APARTMENT_HALLWAY.md",
+    "locations/ENTRANCE_DOOR.md",
+    "locations/PROPS.md#glass"
+   ],
+   "camera": "locked, the image itself shakes only on impacts",
+   "lighting": "under-door light flickers with the shadows outside",
+   "continuity": [
+    "narrow entrance hall of an ordinary Moscow panel-building flat: grey ceramic floor tiles, beige textured wallpaper, low oak-veneer shoe cabinet on the LEFT wall with a round frameless mirror above it, kitchen doorway at the far end letting in faint cold-blue streetlight, ceiling light OFF",
+    "dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door",
+    "classic faceted Soviet glass tumbler (granyonyi stakan) filled to the brim with clear water"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S07_E.mp4"
+  },
+  {
+   "shot": "S08_A",
+   "scene": 8,
+   "duration_s": 2.9,
+   "frames": 70,
+   "prompt": "close-up from a low side angle: the palm of ALEX pressed flat against the inside of the dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door next to the peephole, his face turned away in shadow, only the line of his jaw and stubble visible. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "characters/ALEX_character_bible.md#reference-sheet",
+    "locations/ENTRANCE_DOOR.md"
+   ],
+   "camera": "very slow push-in",
+   "lighting": "peephole point light, under-door strip",
+   "continuity": [
+    "dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S08_A.mp4"
+  },
+  {
+   "shot": "S08_B",
+   "scene": 8,
+   "duration_s": 0.98,
+   "frames": 23,
+   "prompt": "peephole fisheye view: the POLICEMAN stands motionless right in front of the door, staring into the peephole, silent, expressionless; the man at the wall still faces the wall at the left edge. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "characters/POLICEMAN_character_bible.md",
+    "characters/DOUBLE_character_bible.md",
+    "locations/STAIRWELL_CORRIDOR.md"
+   ],
+   "camera": "static",
+   "lighting": "steady fluorescent",
+   "continuity": [
+    "stairwell landing of a Soviet panel building seen from inside the flat: walls painted pale green to shoulder height and whitewashed above, one flat fluorescent tube on the ceiling (steady, no flicker), beige-brown square floor tiles, a brown neighbour door straight across, a closed elevator door on the RIGHT, bare wall on the LEFT"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S08_B.mp4"
+  },
+  {
+   "shot": "S09_A",
+   "scene": 9,
+   "duration_s": 3.4,
+   "frames": 82,
+   "prompt": "peephole fisheye view slowly pushing toward the man at the green wall in the stairwell landing of a Soviet panel building seen from inside the flat: walls painted pale green to shoulder height and whitewashed above, one flat fluorescent tube on the ceiling (steady, no flicker), beige-brown square floor tiles, a brown neighbour door straight across, a closed elevator door on the RIGHT, bare wall on the LEFT: he very slowly turns his head over his shoulder toward the door; his face is still in shadow under the fluorescent light, only the profile, short dark-brown hair and stubble are visible; identical build and hoodie to ALEX. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "characters/DOUBLE_character_bible.md",
+    "characters/ALEX_character_bible.md#reference-sheet",
+    "locations/STAIRWELL_CORRIDOR.md"
+   ],
+   "camera": "slow push-in 6% toward the man",
+   "lighting": "fluorescent top light, face half in shadow",
+   "continuity": [
+    "stairwell landing of a Soviet panel building seen from inside the flat: walls painted pale green to shoulder height and whitewashed above, one flat fluorescent tube on the ceiling (steady, no flicker), beige-brown square floor tiles, a brown neighbour door straight across, a closed elevator door on the RIGHT, bare wall on the LEFT"
+   ],
+   "fallback_note": "If the generator cannot keep the face identical during the head turn: end this shot BEFORE the face is visible and reveal it in S09_B as a separate still/clip made from the ALEX face reference.",
+   "output": "scenes/S09_A.mp4"
+  },
+  {
+   "shot": "S09_B",
+   "scene": 9,
+   "duration_s": 2.02,
+   "frames": 48,
+   "prompt": "peephole fisheye close view: the DOUBLE — exactly the face of ALEX (same face reference, same scar through the left eyebrow, same grey-green eyes, stubble and short dark-brown hair), now facing the door and staring straight into the peephole, completely calm, skin slightly pale and damp. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "characters/DOUBLE_character_bible.md",
+    "characters/ALEX_character_bible.md#reference-sheet",
+    "locations/STAIRWELL_CORRIDOR.md"
+   ],
+   "camera": "static, imperceptible push-in",
+   "lighting": "fluorescent top light, eyes catching a highlight",
+   "continuity": [
+    "stairwell landing of a Soviet panel building seen from inside the flat: walls painted pale green to shoulder height and whitewashed above, one flat fluorescent tube on the ceiling (steady, no flicker), beige-brown square floor tiles, a brown neighbour door straight across, a closed elevator door on the RIGHT, bare wall on the LEFT"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S09_B.mp4"
+  },
+  {
+   "shot": "S09_C",
+   "scene": 9,
+   "duration_s": 1.05,
+   "frames": 25,
+   "prompt": "close-up portrait of ALEX inside the dark narrow entrance hall of an ordinary Moscow panel-building flat: grey ceramic floor tiles, beige textured wallpaper, low oak-veneer shoe cabinet on the LEFT wall with a round frameless mirror above it, kitchen doorway at the far end letting in faint cold-blue streetlight, ceiling light OFF, face lit only by the thin cold light from the peephole, frozen in shock, breath held; exact same face as the reference sheet (scar through the left eyebrow). photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "characters/ALEX_character_bible.md#reference-sheet",
+    "locations/APARTMENT_HALLWAY.md"
+   ],
+   "camera": "static",
+   "lighting": "single cold point light on the face, deep soft shadows",
+   "continuity": [
+    "narrow entrance hall of an ordinary Moscow panel-building flat: grey ceramic floor tiles, beige textured wallpaper, low oak-veneer shoe cabinet on the LEFT wall with a round frameless mirror above it, kitchen doorway at the far end letting in faint cold-blue streetlight, ceiling light OFF"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S09_C.mp4"
+  },
+  {
+   "shot": "S10_A",
+   "scene": 10,
+   "duration_s": 1.4,
+   "frames": 34,
+   "prompt": "first-person POV stepping backwards away from the dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door down the dark narrow entrance hall of an ordinary Moscow panel-building flat: grey ceramic floor tiles, beige textured wallpaper, low oak-veneer shoe cabinet on the LEFT wall with a round frameless mirror above it, kitchen doorway at the far end letting in faint cold-blue streetlight, ceiling light OFF; the peephole point of light recedes. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "locations/APARTMENT_HALLWAY.md",
+    "locations/ENTRANCE_DOOR.md"
+   ],
+   "camera": "POV pull-back, two unsteady steps",
+   "lighting": "peephole point and under-door strip",
+   "continuity": [
+    "narrow entrance hall of an ordinary Moscow panel-building flat: grey ceramic floor tiles, beige textured wallpaper, low oak-veneer shoe cabinet on the LEFT wall with a round frameless mirror above it, kitchen doorway at the far end letting in faint cold-blue streetlight, ceiling light OFF",
+    "dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S10_A.mp4"
+  },
+  {
+   "shot": "S10_B",
+   "scene": 10,
+   "duration_s": 1.6,
+   "frames": 38,
+   "prompt": "peephole fisheye view: the DOUBLE (face of ALEX) walks up to the door until his face fills most of the lens, eyes on the peephole. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "characters/DOUBLE_character_bible.md",
+    "characters/ALEX_character_bible.md#reference-sheet",
+    "locations/STAIRWELL_CORRIDOR.md"
+   ],
+   "camera": "static fisheye",
+   "lighting": "fluorescent",
+   "continuity": [
+    "stairwell landing of a Soviet panel building seen from inside the flat: walls painted pale green to shoulder height and whitewashed above, one flat fluorescent tube on the ceiling (steady, no flicker), beige-brown square floor tiles, a brown neighbour door straight across, a closed elevator door on the RIGHT, bare wall on the LEFT"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S10_B.mp4"
+  },
+  {
+   "shot": "S10_C",
+   "scene": 10,
+   "duration_s": 2.1,
+   "frames": 51,
+   "prompt": "peephole fisheye view: a man's right palm smeared with dark blood presses flat onto the outer lens of the peephole; the view turns dark red, palm lines and smeared blood visible, the fluorescent light glowing faintly through; realistic, not gory. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "characters/DOUBLE_character_bible.md",
+    "locations/STAIRWELL_CORRIDOR.md"
+   ],
+   "camera": "static",
+   "lighting": "fluorescent light filtered through blood",
+   "continuity": [
+    "stairwell landing of a Soviet panel building seen from inside the flat: walls painted pale green to shoulder height and whitewashed above, one flat fluorescent tube on the ceiling (steady, no flicker), beige-brown square floor tiles, a brown neighbour door straight across, a closed elevator door on the RIGHT, bare wall on the LEFT"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S10_C.mp4"
+  },
+  {
+   "shot": "S10_D",
+   "scene": 10,
+   "duration_s": 1.95,
+   "frames": 47,
+   "prompt": "peephole fisheye: the bloody palm slowly slides down off the lens leaving a red smear across the view; behind the smear, very close, the face of the DOUBLE (face of ALEX) looking into the peephole. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "characters/DOUBLE_character_bible.md",
+    "characters/ALEX_character_bible.md#reference-sheet",
+    "locations/STAIRWELL_CORRIDOR.md"
+   ],
+   "camera": "static",
+   "lighting": "fluorescent",
+   "continuity": [
+    "stairwell landing of a Soviet panel building seen from inside the flat: walls painted pale green to shoulder height and whitewashed above, one flat fluorescent tube on the ceiling (steady, no flicker), beige-brown square floor tiles, a brown neighbour door straight across, a closed elevator door on the RIGHT, bare wall on the LEFT"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S10_D.mp4"
+  },
+  {
+   "shot": "S10_E",
+   "scene": 10,
+   "duration_s": 1.65,
+   "frames": 39,
+   "prompt": "extreme close-up through the blood-smeared peephole lens: the lips and lower face of the DOUBLE (face of ALEX, stubble) silently and clearly mouthing the Russian words 'Ne ver telefonu' (four distinct mouth shapes: n-e, v-e-r, te-le, fo-nu); no sound. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "characters/DOUBLE_character_bible.md",
+    "characters/ALEX_character_bible.md#reference-sheet",
+    "locations/STAIRWELL_CORRIDOR.md"
+   ],
+   "camera": "static",
+   "lighting": "fluorescent",
+   "continuity": [
+    "stairwell landing of a Soviet panel building seen from inside the flat: walls painted pale green to shoulder height and whitewashed above, one flat fluorescent tube on the ceiling (steady, no flicker), beige-brown square floor tiles, a brown neighbour door straight across, a closed elevator door on the RIGHT, bare wall on the LEFT"
+   ],
+   "fallback_note": "Lip-sync: mouth shapes must land on 64.75 «Не», 64.99 «верь», 65.35 «телефону». Second voice is NOT added.",
+   "output": "scenes/S10_E.mp4"
+  },
+  {
+   "shot": "S11_A",
+   "scene": 11,
+   "duration_s": 1.5,
+   "frames": 36,
+   "prompt": "the black unbranded smartphone with thin bezels, dark-mode screen on the shoe cabinet lights up again and vibrates; its cold glow reflects in the round mirror above; the dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door is a dark mass at the frame edge; screen left plain for compositing. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "locations/PROPS.md#phone",
+    "locations/APARTMENT_HALLWAY.md",
+    "locations/ENTRANCE_DOOR.md"
+   ],
+   "camera": "slow push toward the phone",
+   "lighting": "phone glow",
+   "continuity": [
+    "black unbranded smartphone with thin bezels, dark-mode screen",
+    "narrow entrance hall of an ordinary Moscow panel-building flat: grey ceramic floor tiles, beige textured wallpaper, low oak-veneer shoe cabinet on the LEFT wall with a round frameless mirror above it, kitchen doorway at the far end letting in faint cold-blue streetlight, ceiling light OFF",
+    "dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door",
+    "Phone screen plain, UI composited later: assets/ui/screens/screen_open.png"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S11_A.mp4"
+  },
+  {
+   "shot": "S12_A",
+   "scene": 12,
+   "duration_s": 2.0,
+   "frames": 48,
+   "prompt": "close-up of the lock cylinder and the chrome thumb-turn latch of the dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door from inside, absolutely still, cold light from the gap. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "locations/ENTRANCE_DOOR.md"
+   ],
+   "camera": "imperceptible push-in",
+   "lighting": "cold under-door light",
+   "continuity": [
+    "dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S12_A.mp4"
+  },
+  {
+   "shot": "S12_B",
+   "scene": 12,
+   "duration_s": 2.15,
+   "frames": 51,
+   "prompt": "extreme close-up: the chrome thumb-turn latch of the dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door begins to rotate on its own as a key turns the cylinder from outside; nobody is visible; the turn is only half complete. photorealistic cinematic psychological thriller still, shot on ARRI Alexa 35 with Cooke S4 lenses, vertical 9:16 composition, night, very low practical light, cold blue-grey grade, neutral natural skin tones, deep shadows that are not crushed to pure black, subtle 35mm film grain, realistic textures, physically correct shadows and reflections, restrained and grounded, no stylisation",
+   "negative_prompt": "cartoon, anime, illustration, 3d render, CGI look, plastic skin, waxy face, beauty filter, deformed hands, extra fingers, fused fingers, distorted face, asymmetric eyes, warped door, melting objects, floating objects, text, letters, captions, watermark, logo, brand names, readable insignia, oversaturated, neon, glitch, chromatic aberration overload, cheap horror filter, gore, exaggerated blood, jump-scare face, demon, monster, fog machine, lens flare overload, shaky cam, dutch angle",
+   "references": [
+    "locations/ENTRANCE_DOOR.md"
+   ],
+   "camera": "locked",
+   "lighting": "cold under-door light",
+   "continuity": [
+    "dark-brown powder-coated steel entrance door, brushed-chrome lever handle on the LEFT side, round lock cylinder below the handle, small chrome thumb-turn latch above the handle, single peephole at eye level in the centre, hinges on the right, thin cold fluorescent light leaking through the gap under the door"
+   ],
+   "fallback_note": null,
+   "output": "scenes/S12_B.mp4"
+  }
+ ]
+}
