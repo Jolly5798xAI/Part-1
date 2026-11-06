@@ -1,0 +1,7 @@
+scripts/render3d/node_modules/
+illustrations/*/
+illustrations/_jobs.json
+audio/music_ep01.wav
+renders/still_*.png
+__pycache__/
+renders/*.mp4

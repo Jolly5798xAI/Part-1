@@ -1,0 +1,230 @@
+{
+ "S01_glass_hook": {
+  "shot": "S01_glass_hook",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "S02_door_inside": {
+  "shot": "S02_door_inside",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "S03_phone_msg1": {
+  "shot": "S03_phone_msg1",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1,
+  "screen": [
+   [
+    404,
+    1049
+   ],
+   [
+    1135,
+    1012
+   ],
+   [
+    1198,
+    2544
+   ],
+   [
+    495,
+    2556
+   ]
+  ]
+ },
+ "S04_alex_phone_face": {
+  "shot": "S04_alex_phone_face",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "S05_place_glass": {
+  "shot": "S05_place_glass",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "S06_phone_bank": {
+  "shot": "S06_phone_bank",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1,
+  "screen": [
+   [
+    480,
+    772
+   ],
+   [
+    1282,
+    846
+   ],
+   [
+    1139,
+    2538
+   ],
+   [
+    349,
+    2501
+   ]
+  ]
+ },
+ "S07_entry_wide": {
+  "shot": "S07_entry_wide",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "S08_peephole_lean": {
+  "shot": "S08_peephole_lean",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "S09_peephole_wide": {
+  "shot": "S09_peephole_wide",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "S10_peephole_man": {
+  "shot": "S10_peephole_man",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "S11_hand_lock": {
+  "shot": "S11_hand_lock",
+  "w": 1296,
+  "h": 2304,
+  "frames": 30
+ },
+ "S12_phone_rack": {
+  "shot": "S12_phone_rack",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1,
+  "screen": [
+   [
+    408,
+    1373
+   ],
+   [
+    593,
+    1177
+   ],
+   [
+    1218,
+    1430
+   ],
+   [
+    1054,
+    1654
+   ]
+  ]
+ },
+ "S13_door_bang": {
+  "shot": "S13_door_bang",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "S14_peephole_cop": {
+  "shot": "S14_peephole_cop",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "S15_head_turn": {
+  "shot": "S15_head_turn",
+  "w": 1296,
+  "h": 2304,
+  "frames": 60
+ },
+ "S16_double_face": {
+  "shot": "S16_double_face",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "S17_alex_steps_back": {
+  "shot": "S17_alex_steps_back",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "S18_bloody_palm": {
+  "shot": "S18_bloody_palm",
+  "w": 1296,
+  "h": 2304,
+  "frames": 24
+ },
+ "S19_phone_final": {
+  "shot": "S19_phone_final",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1,
+  "screen": [
+   [
+    210,
+    956
+   ],
+   [
+    1164,
+    841
+   ],
+   [
+    1410,
+    2884
+   ],
+   [
+    456,
+    2999
+   ]
+  ]
+ },
+ "S20_lock_turns": {
+  "shot": "S20_lock_turns",
+  "w": 1296,
+  "h": 2304,
+  "frames": 90
+ },
+ "REF_alex": {
+  "shot": "REF_alex",
+  "w": 1080,
+  "h": 1920,
+  "frames": 1
+ },
+ "REF_cop": {
+  "shot": "REF_cop",
+  "w": 1080,
+  "h": 1920,
+  "frames": 1
+ },
+ "S16_double_face_neutral": {
+  "shot": "S16_double_face",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "S16_double_face_ee": {
+  "shot": "S16_double_face",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "S16_double_face_oo": {
+  "shot": "S16_double_face",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "S16_double_face_open": {
+  "shot": "S16_double_face",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ }
+}
