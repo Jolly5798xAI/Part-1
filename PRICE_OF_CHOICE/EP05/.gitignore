@@ -1,0 +1,10 @@
+scripts/render3d/node_modules/
+scenes/*/
+scenes/_jobs.json
+audio/mix_ep05.wav
+audio/music_ep05.wav
+audio/stem_*.wav
+renders/still_*.png
+renders/ui_preview/
+renders/preview_*.mp4
+__pycache__/
