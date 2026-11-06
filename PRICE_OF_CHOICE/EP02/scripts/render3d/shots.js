@@ -64,6 +64,41 @@
     return { cop, dbl };
   }
 
+  // ---------- EP02 helpers (only used by E2_* shots) ----------
+  // open the door inward by `r` radians (hinge on the right, lock edge moves into the flat)
+  function ajar(W, r) { W.objs.doorPivot.rotation.y = r; W.scene.updateMatrixWorld(true); }
+  function leverPos(W) { W.scene.updateMatrixWorld(true); return W.objs.lever.getWorldPosition(V(0, 0, 0)); }
+  // point an arm of a makePerson figure at a world-space target
+  function reachTo(person, side, target) {
+    person.updateMatrixWorld(true);
+    const a = person.userData.arms[side];
+    const sh = a.getWorldPosition(V(0, 0, 0));
+    const d = target.clone().sub(sh).applyQuaternion(person.quaternion.clone().invert()).normalize();
+    a.quaternion.setFromUnitVectors(V(0, -1, 0), d);
+  }
+  // the stairwell's fluorescent tube, shadow-casting, so it only spills in through the gap
+  function gapLight(W, k = 1) {
+    const l = new THREE.PointLight('#eef8e2', 9 * k, 9, 1.4); l.position.set(0.1, 2.55, -1.6);
+    l.castShadow = true; l.shadow.mapSize.set(1024, 1024); l.shadow.bias = -0.002; W.scene.add(l);
+    const l2 = new THREE.PointLight('#e6f3dc', 3 * k, 3, 1.5); l2.position.set(-0.6, 1.6, -0.5);
+    l2.castShadow = true; l2.shadow.mapSize.set(1024, 1024); l2.shadow.bias = -0.002; W.scene.add(l2);
+  }
+  // water spreading in from under the door (t 0..1), flat low-poly blobs
+  function puddle(W, t) {
+    const m = new THREE.MeshStandardMaterial({ color: '#5b90a8', emissive: '#0f2d37', roughness: 0.12, metalness: 0.0, transparent: true, opacity: 0.8, flatShading: true });
+    const rnd = (s => () => { s = (s * 16807) % 2147483647; return s / 2147483647; })(7);
+    const blobs = [];
+    for (let i = 0; i < 16; i++) blobs.push([-0.38 + 0.76 * rnd(), 0.03 + 0.42 * rnd(), 0.06 + 0.12 * rnd(), rnd() * 0.5]);
+    for (const [x, z, r, delay] of blobs) {
+      const k = Math.max(0, Math.min(1, (t - delay) / (1 - delay + 1e-6)));
+      const reach = k * 0.5; if (z > reach + 0.02) continue;
+      const rr = r * Math.min(1, (reach - z + 0.12) / 0.12) * (0.4 + 0.6 * k);
+      if (rr <= 0.005) continue;
+      const b = new THREE.Mesh(new THREE.CylinderGeometry(rr, rr, 0.003, 7), m); b.position.set(x, 0.0135 + 0.0002 * blobs.findIndex(q => q[0] === x), z); /* above the door mat */ b.rotation.y = x * 9; b.receiveShadow = true; W.scene.add(b);
+    }
+    if (t > 0.02) { const s = new THREE.Mesh(new THREE.BoxGeometry(0.86, 0.003, 0.04 + 0.05 * t), m); s.position.set(0, 0.0135, 0.02 + 0.025 * t); W.scene.add(s); }
+  }
+
   const SHOTS = {
     // 0.0 — hook: the glass of water by the door
     S01_glass_hook: { desc: 'Glass of water on the floor by the front door, light leaking under the door', make(W, t, A) {
@@ -201,6 +236,131 @@
       const l = new THREE.PointLight('#ffcf8a', 0.9, 1.0); l.position.set(-0.2, 1.3, 0.5); W.scene.add(l);
       const z = 0.42 - 0.12 * t;
       return camera(32, V(-0.28, 1.24, z), V(-0.37, 1.2, 0.03), A);
+    } },
+    // ====================================================================== EP02 (same world, same cast)
+    // door forced open from outside, Alex's hands on the lever (t: 0 closed -> 1 ajar ~0.2 rad); seen from the lock side
+    E2_door_gap: { desc: 'Both of Alex\'s hands on the lever; the door is forced inward, cold light knifes through the gap', frames: 40, make(W, t, A) {
+      const k = [[0, 0], [0.25, 0.015], [0.35, 0.01], [0.55, 0.07], [0.62, 0.055], [0.85, 0.17], [1, 0.2]];
+      let r = 0; for (let i = 1; i < k.length; i++) if (t <= k[i][0]) { const u = (t - k[i - 1][0]) / (k[i][0] - k[i - 1][0]); r = k[i - 1][1] + (k[i][1] - k[i - 1][1]) * u * u * (3 - 2 * u); break; }
+      ajar(W, r);
+      const lv = leverPos(W);
+      W.scene.add(aimArm(arm(), V(0.3, 1.3, 0.75), lv.clone().add(V(0.06, 0.0, 0.05))));
+      W.scene.add(aimArm(arm(), V(-0.1, 1.35, 0.8), lv.clone().add(V(-0.03, 0.03, 0.06))));
+      P.lightsInterior(W.scene, { amb: 0.45, leak: 8 }); gapLight(W, 1.2);
+      return camera(44, V(-0.66, 1.2, 0.95), V(-0.3, 1.05, 0.0), A);
+    } },
+    // Alex braces against the ajar door, seen from the back-left of the hallway (params: leg)
+    E2_alex_brace: { desc: 'Alex leans into the half-forced door, cold slit of light from the stairwell', make(W, t, A) {
+      ajar(W, W.p.ajar ?? 0.17);
+      const a = alex({ face: 'worried' }); a.position.set(-0.02, 0, W.p.leg ? 0.62 : 0.58); a.rotation.y = Math.PI * 1.08; W.scene.add(a);
+      const lv = leverPos(W);
+      reachTo(a, 1, lv.clone().add(V(0.05, 0, 0.04))); reachTo(a, -1, lv.clone().add(V(-0.04, 0.02, 0.05)));
+      if (W.p.leg) { a.userData.legL.rotation.x = -0.85; }
+      P.lightsInterior(W.scene, { amb: 0.4, moon: 0.6, leak: 7 }); gapLight(W, 1.2);
+      return camera(46, V(-0.6, 1.2, 2.55), V(-0.18, 0.98, 0.15), A);
+    } },
+    // Alex's face in the slit of cold light
+    E2_alex_face: { desc: 'Close-up: Alex\'s worried face cut by a slit of cold light from the gap', make(W, t, A) {
+      ajar(W, 0.17);
+      const a = alex({ face: 'worried' }); a.position.set(-0.02, 0, 0.58); a.rotation.y = Math.PI * 1.08; W.scene.add(a);
+      const lv = leverPos(W); reachTo(a, 1, lv.clone().add(V(0.05, 0, 0.04))); reachTo(a, -1, lv.clone().add(V(-0.04, 0.02, 0.05)));
+      a.userData.headPivot.rotation.y = -1.35; // turns to the phone on the shoe rack
+      P.lightsInterior(W.scene, { amb: 0.32, moon: 0.4, warm: 0.9 }); gapLight(W, 1.4);
+      const s = new THREE.SpotLight('#dff0d0', 4, 2.6, 0.35, 0.85, 1.2); s.position.set(-0.5, 1.55, -0.15); s.target.position.set(0.0, 1.55, 0.55); W.scene.add(s, s.target);
+      const ph = new THREE.PointLight('#ff9a9a', 1.3, 1.6, 1.6); ph.position.set(0.7, 1.0, 0.9); W.scene.add(ph); // the red lock screen on the rack
+      return camera(46, V(0.88, 1.56, 0.22), V(-0.02, 1.54, 0.6), A);
+    } },
+    // through the gap: a sliver of the stairwell (params: dbl, face)
+    E2_gap: { desc: 'Tight on the gap between door edge and frame; the stairwell beyond (the double\'s face in the gap when dbl)', make(W, t, A) {
+      ajar(W, 0.2);
+      if (W.p.dbl) {
+        const d = alex({ bloodyRight: true, face: W.p.face || 'neutral' }); d.position.set(-0.27, 0, -0.56); d.rotation.y = -0.35; W.scene.add(d);
+      }
+      P.lightsInterior(W.scene, { amb: 0.25, moon: 0.35, warm: 0.8 }); gapLight(W, 1.3);
+      const f = new THREE.PointLight('#e6f3dc', W.p.dbl ? 1.6 : 0.9, 1.4, 1.6); f.position.set(-0.35, 1.75, -0.12); W.scene.add(f);
+      return camera(W.p.dbl ? 26 : 30, V(-0.68, 1.55, 0.62), V(-0.3, 1.52, -0.42), A);
+    } },
+    // water seeping under the door (t: 0 dry -> 1 puddle)
+    E2_water: { desc: 'Low close-up: water slowly seeps in under the door across the laminate', frames: 40, make(W, t, A) {
+      puddle(W, t);
+      P.lightsInterior(W.scene, { leak: 10, amb: 0.42 });
+      return camera(40, V(0.32, 0.16, 0.95), V(-0.05, 0.02, 0.05), A);
+    } },
+    // the glass from EP01 — now empty, standing in the puddle
+    E2_glass_empty: { desc: 'The glass by the door is empty, standing in the puddle (EP01 hook framing)', make(W, t, A) {
+      const g = P.makeGlass(); g.children[2].visible = false; g.children[3].visible = false; g.position.set(0.12, 0, 0.26); W.scene.add(g);
+      puddle(W, 1);
+      P.lightsInterior(W.scene, { leak: 9, amb: 0.45 });
+      return camera(42, V(0.45, 0.24, 0.98), V(0.1, 0.17, 0.2), A);
+    } },
+    // entryway from behind Alex (EP01 S07 framing), empty glass + puddle; params: shadows (feet under the door)
+    E2_entry_wide: { desc: 'Dark entryway, Alex from behind facing the door, empty glass and the puddle (shadows under the door when shadows)', make(W, t, A) {
+      const a = alex(); a.position.set(0.42, 0, 1.45); a.rotation.y = Math.PI * 1.04; W.scene.add(a);
+      const g = P.makeGlass(); g.children[2].visible = false; g.children[3].visible = false; g.position.set(0.12, 0, 0.26); W.scene.add(g);
+      puddle(W, 1);
+      if (W.p.shadows) for (const x of [-0.25, -0.12, 0.14, 0.24]) P.box(0.08, 0.014, 0.004, new THREE.MeshBasicMaterial({ color: '#0a0a0a' }), x, 0.006, 0.0035, W.scene);
+      P.lightsInterior(W.scene, { leak: 10 });
+      return camera(50, V(-0.3, 1.35, 3.75), V(0.08, 1.0, 0.0), A);
+    } },
+    // door from inside, low angle (EP01 S02 framing), empty glass + puddle
+    E2_door_low: { desc: 'Front door from inside, low angle, empty glass in the puddle', make(W, t, A) {
+      const g = P.makeGlass(); g.children[2].visible = false; g.children[3].visible = false; g.position.set(0.12, 0, 0.26); W.scene.add(g);
+      puddle(W, 1);
+      P.lightsInterior(W.scene, { leak: 8 });
+      return camera(48, V(-0.35, 0.75, 1.45), V(0.0, 1.15, 0.0), A);
+    } },
+    // peephole: the landing is empty
+    E2_peep_empty: { desc: 'Through the peephole: the landing is empty', peephole: true, make(W, t, A) {
+      P.lightsStairwell(W.scene);
+      return camera(100, PEEP, V(0.2, 1.4, -2.0), A);
+    } },
+    // peephole, down: a phone like Alex's lying on the tiles (screen composited)
+    E2_peep_phone: { desc: 'Through the peephole, looking down: a phone identical to Alex\'s lies on the landing floor', peephole: true, phone: true, make(W, t, A) {
+      const ph = P.makePhone(W.p.lit ? '#cfe0ff' : '#0c0f14'); ph.position.set(0.12, 0.006, -0.62); ph.rotation.set(-Math.PI / 2, 0, -0.4); W.scene.add(ph);
+      W.screen = ph.getObjectByName('screen');
+      P.lightsStairwell(W.scene);
+      return camera(80, PEEP, V(0.1, 0.0, -0.7), A);
+    } },
+    // the photo on that phone: Alex at the peephole, taken from right behind him
+    E2_photo_back: { desc: 'Photo: Alex at the peephole, shot from right behind his back inside the entryway', make(W, t, A) {
+      const a = alex({ face: 'worried' }); a.position.set(0.0, 0.04, 0.27); a.rotation.y = Math.PI; W.scene.add(a);
+      a.userData.arms[-1].rotation.x = -1.6; a.userData.arms[-1].rotation.z = -0.25;
+      const g = P.makeGlass(); g.children[2].visible = false; g.children[3].visible = false; g.position.set(0.12, 0, 0.26); W.scene.add(g);
+      puddle(W, 1);
+      P.lightsInterior(W.scene, { amb: 0.45, leak: 9 });
+      const fl = new THREE.PointLight('#f4f1ea', 1.8, 3.0, 1.6); fl.position.set(0.15, 1.7, 1.6); W.scene.add(fl); // phone-camera flash
+      return camera(50, V(0.15, 1.7, 1.65), V(0.0, 1.3, 0.1), A);
+    } },
+    // photos for the choice screen (3:4)
+    E2_photo_cop: { desc: 'Photo for the choice screen: the officer on the landing, flash-lit', size: [600, 800], make(W, t, A) {
+      const c = P.makePerson('cop'); c.position.set(-0.2, 0, -1.15); c.rotation.y = 0.08; W.scene.add(c);
+      P.lightsStairwell(W.scene, { amb: 0.7 });
+      const fl = new THREE.PointLight('#ffffff', 1.4, 2.5, 1.5); fl.position.set(-0.12, 1.6, -0.15); W.scene.add(fl);
+      return camera(42, V(-0.14, 1.58, -0.1), V(-0.19, 1.4, -1.15), A);
+    } },
+    E2_photo_dbl: { desc: 'Photo for the choice screen: Alex (the double) on the landing, flash-lit', size: [600, 800], make(W, t, A) {
+      const d = alex(); d.position.set(0.25, 0, -1.2); d.rotation.y = -0.1; W.scene.add(d);
+      P.lightsStairwell(W.scene, { amb: 0.7 });
+      const fl = new THREE.PointLight('#ffffff', 1.4, 2.5, 1.5); fl.position.set(0.2, 1.6, -0.15); W.scene.add(fl);
+      return camera(42, V(0.2, 1.58, -0.1), V(0.24, 1.4, -1.2), A);
+    } },
+    // the double stands right behind Alex at the peephole, in the dark (seen down the hallway)
+    E2_double_behind: { desc: 'Down the hallway: Alex at the peephole; in the dark right behind him stands his double (bloody hand)', make(W, t, A) {
+      const a = alex({ face: 'worried' }); a.position.set(0.0, 0.04, 0.27); a.rotation.y = Math.PI; W.scene.add(a);
+      a.userData.arms[-1].rotation.x = -1.6; a.userData.arms[-1].rotation.z = -0.25;
+      const g = P.makeGlass(); g.children[2].visible = false; g.children[3].visible = false; g.position.set(0.12, 0, 0.26); W.scene.add(g);
+      puddle(W, 1);
+      const d = alex({ bloodyRight: true }); d.position.set(-0.43, 0, 0.42); d.rotation.y = Math.PI / 2; W.scene.add(d);
+      P.lightsInterior(W.scene, { amb: 0.4, moon: 0.5, warm: 0.5, leak: 10 });
+      return camera(46, V(0.35, 1.45, 2.7), V(-0.02, 1.2, 0.3), A);
+    } },
+    // close: the double's face by Alex's ear (params: face for the lip shapes)
+    E2_double_ear: { desc: 'Close-up over Alex\'s shoulder: the double\'s face right by his ear, whispering', make(W, t, A) {
+      const a = alex({ face: 'worried' }); a.position.set(0.0, 0.04, 0.27); a.rotation.y = Math.PI; W.scene.add(a);
+      const d = alex({ bloodyRight: true, face: W.p.face || 'neutral' }); d.position.set(-0.43, 0, 0.42); d.rotation.y = Math.PI / 2; W.scene.add(d);
+      P.lightsInterior(W.scene, { amb: 0.3, moon: 0.35, warm: 0.6, leak: 9 });
+      const l = new THREE.PointLight('#dff0d0', 1.1, 1.4, 1.6); l.position.set(-0.05, 1.25, 0.75); W.scene.add(l);
+      return camera(36, V(0.9, 1.6, 0.98), V(-0.36, 1.55, 0.42), A);
     } },
     // reference turnarounds (character/location sheets)
     REF_alex: { desc: 'Character reference: Alex', ref: true, make(W, t, A) {

@@ -11,6 +11,8 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageChops, ImageEnhan
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import timeline_ep02 as TL
 import phone_ui
+phone_ui.CLOCK = getattr(TL, "PHONE_CLOCK", phone_ui.CLOCK)
+phone_ui.LOCK_CLOCK = getattr(TL, "PHONE_CLOCK", phone_ui.LOCK_CLOCK)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ILL = os.path.join(ROOT, "illustrations")
@@ -61,7 +63,7 @@ def source_image(shot, t):
         v = "neutral"
         for tt, vv in TL.LIPSYNC:
             if t >= tt: v = vv
-        name = f"S16_double_face_{v}"; return load(os.path.join(ILL, name + ".png")), name
+        name = f"{shot.get('lips', 'S16_double_face')}_{v}"; return load(os.path.join(ILL, name + ".png")), name
     if "anim" in shot:
         fr = anim_frames(src)
         a0, a1 = shot["t"]
@@ -254,6 +256,7 @@ def sub_image(text, size=68, maxw=880):
 
 
 def subtitle_zone(shot):
+    if shot.get("sub") == "bottom": return 1330  # EP02: phone shots where the top of the screen carries text
     if "phone" in shot or shot.get("sub") == "top": return 330  # phone fills the middle/bottom -> top
     return 1330
 
@@ -261,7 +264,7 @@ def subtitle_zone(shot):
 def draw_subs(frame, t, shot):
     for a, b, text in TL.SUBS:
         if a <= t < b:
-            special = text.startswith("«!Не верь")
+            special = text.startswith("«!Не верь") or text in getattr(TL, "BIG_SUBS", ())
             img = sub_image(text, 84 if special else 66)
             age = t - a; k = min(1, age / 0.12)
             sc = 0.9 + 0.1 * k
@@ -277,8 +280,9 @@ def draw_subs(frame, t, shot):
 def draw_countdown(frame, t):
     # TL.COUNTDOWN = (show_from, start, seconds) or None  (EP01 used (68.58, 69.96, 10))
     if not getattr(TL, "COUNTDOWN", None): return
-    _, st, secs = TL.COUNTDOWN
-    if t < st or t >= TL.CUT_TO_BLACK: return
+    _, st, secs = TL.COUNTDOWN[:3]
+    until = TL.COUNTDOWN[3] if len(TL.COUNTDOWN) > 3 else TL.CUT_TO_BLACK
+    if t < st or t >= until: return
     rem = max(0, secs - int(t - st))
     d = ImageDraw.Draw(frame)
     f = ImageFont.truetype(FONT_UI, 92)
@@ -295,8 +299,9 @@ def draw_endcard(frame, t):
     d = ImageDraw.Draw(frame)
     f1 = ImageFont.truetype(FONT_SUB, 96); f2 = ImageFont.truetype(os.path.join(ROOT, "effects", "fonts", "Rubik-Medium.ttf"), 40)
     d.text((OW // 2, 880), "ЦЕНА ВЫБОРА", font=f1, fill=(235, 30, 36, int(255 * k)), anchor="mm")
-    d.text((OW // 2, 990), "Серия 1 · «Стакан воды»", font=f2, fill=(220, 220, 225, int(230 * k)), anchor="mm")
-    d.text((OW // 2, 1060), "Продолжение следует", font=f2, fill=(160, 160, 168, int(230 * k)), anchor="mm")
+    line2, line3 = getattr(TL, "ENDCARD", ("Серия 1 · «Стакан воды»", "Продолжение следует"))
+    d.text((OW // 2, 990), line2, font=f2, fill=(220, 220, 225, int(230 * k)), anchor="mm")
+    d.text((OW // 2, 1060), line3, font=f2, fill=(160, 160, 168, int(230 * k)), anchor="mm")
 
 
 def dust(frame, t, shot):
@@ -338,6 +343,10 @@ def render_frame(fi):
         if "glitch" in fx and (t - shot["t"][0]) < 0.6 and rg.random() < 0.55:
             sh = int(rg.integers(8, 26)); a = a.copy(); a[..., 0] = np.roll(a[..., 0], sh, axis=1); a[..., 2] = np.roll(a[..., 2], -sh, axis=1)
             y0 = int(rg.integers(0, OH - 200)); hh = int(rg.integers(30, 160)); a[y0:y0 + hh] = np.roll(a[y0:y0 + hh], int(rg.integers(-60, 60)), axis=1)
+        if "memory" in fx:  # EP02: soft, hazy flashback insert
+            bl = np.asarray(Image.fromarray(np.clip(a, 0, 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(9)), np.float32)
+            a = a * 0.55 + bl * 0.45 + 10
+        if "photo" in fx: gain *= 1.12  # EP02: flash-lit phone photo
         if "iris_out" in fx:
             k = (t - (shot["t"][1] - 0.3)) / 0.3
             if k > 0: gain *= 1 - ease_io(k)
@@ -354,7 +363,7 @@ def render_frame(fi):
     # hard cut to black at the end of the lock shot
     frame = Image.fromarray(np.clip(a, 0, 255).astype(np.uint8)).convert("RGBA")
     if "dust" in fx: dust(frame, t, shot)
-    if "countdown" in fx or (getattr(TL, "COUNTDOWN", None) and TL.COUNTDOWN[0] <= t < TL.CUT_TO_BLACK and "phone" not in shot): draw_countdown(frame, t)
+    if "countdown" in fx or (getattr(TL, "COUNTDOWN", None) and len(TL.COUNTDOWN) == 3 and TL.COUNTDOWN[0] <= t < TL.CUT_TO_BLACK and "phone" not in shot): draw_countdown(frame, t)
     if "endcard" in fx: draw_endcard(frame, t)
     draw_subs(frame, t, shot)
     return frame.convert("RGB").tobytes()

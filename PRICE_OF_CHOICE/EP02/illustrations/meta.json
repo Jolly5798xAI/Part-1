@@ -1,0 +1,320 @@
+{
+ "S03_phone_msg1": {
+  "shot": "S03_phone_msg1",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1,
+  "screen": [
+   [
+    404,
+    1049
+   ],
+   [
+    1135,
+    1012
+   ],
+   [
+    1198,
+    2544
+   ],
+   [
+    495,
+    2556
+   ]
+  ]
+ },
+ "S04_alex_phone_face": {
+  "shot": "S04_alex_phone_face",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "S05_place_glass": {
+  "shot": "S05_place_glass",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "S06_phone_bank": {
+  "shot": "S06_phone_bank",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1,
+  "screen": [
+   [
+    480,
+    772
+   ],
+   [
+    1282,
+    846
+   ],
+   [
+    1139,
+    2538
+   ],
+   [
+    349,
+    2501
+   ]
+  ]
+ },
+ "S08_peephole_lean": {
+  "shot": "S08_peephole_lean",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "S12_phone_rack": {
+  "shot": "S12_phone_rack",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1,
+  "screen": [
+   [
+    408,
+    1373
+   ],
+   [
+    593,
+    1177
+   ],
+   [
+    1218,
+    1430
+   ],
+   [
+    1054,
+    1654
+   ]
+  ]
+ },
+ "S13_door_bang": {
+  "shot": "S13_door_bang",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "S19_phone_final": {
+  "shot": "S19_phone_final",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1,
+  "screen": [
+   [
+    210,
+    956
+   ],
+   [
+    1164,
+    841
+   ],
+   [
+    1410,
+    2884
+   ],
+   [
+    456,
+    2999
+   ]
+  ]
+ },
+ "S20_lock_turns": {
+  "shot": "S20_lock_turns",
+  "w": 1296,
+  "h": 2304,
+  "frames": 90
+ },
+ "E2_door_gap": {
+  "shot": "E2_door_gap",
+  "w": 1296,
+  "h": 2304,
+  "frames": 40
+ },
+ "E2_alex_brace": {
+  "shot": "E2_alex_brace",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E2_alex_face": {
+  "shot": "E2_alex_face",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E2_gap": {
+  "shot": "E2_gap",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E2_water": {
+  "shot": "E2_water",
+  "w": 1296,
+  "h": 2304,
+  "frames": 40
+ },
+ "E2_glass_empty": {
+  "shot": "E2_glass_empty",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E2_entry_wide": {
+  "shot": "E2_entry_wide",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E2_door_low": {
+  "shot": "E2_door_low",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E2_peep_empty": {
+  "shot": "E2_peep_empty",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E2_peep_phone": {
+  "shot": "E2_peep_phone",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1,
+  "screen": [
+   [
+    827,
+    1430
+   ],
+   [
+    899,
+    1444
+   ],
+   [
+    869,
+    1595
+   ],
+   [
+    796,
+    1580
+   ]
+  ]
+ },
+ "E2_photo_back": {
+  "shot": "E2_photo_back",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E2_photo_cop": {
+  "shot": "E2_photo_cop",
+  "w": 600,
+  "h": 800,
+  "frames": 1
+ },
+ "E2_photo_dbl": {
+  "shot": "E2_photo_dbl",
+  "w": 600,
+  "h": 800,
+  "frames": 1
+ },
+ "E2_double_behind": {
+  "shot": "E2_double_behind",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E2_double_ear": {
+  "shot": "E2_double_ear",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E2_alex_brace_leg": {
+  "shot": "E2_alex_brace",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E2_entry_wide_shadows": {
+  "shot": "E2_entry_wide",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E2_peep_phone_lit": {
+  "shot": "E2_peep_phone",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1,
+  "screen": [
+   [
+    827,
+    1430
+   ],
+   [
+    899,
+    1444
+   ],
+   [
+    869,
+    1595
+   ],
+   [
+    796,
+    1580
+   ]
+  ]
+ },
+ "E2_gap_double_neutral": {
+  "shot": "E2_gap",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E2_double_ear_neutral": {
+  "shot": "E2_double_ear",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E2_gap_double_ee": {
+  "shot": "E2_gap",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E2_double_ear_ee": {
+  "shot": "E2_double_ear",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E2_gap_double_oo": {
+  "shot": "E2_gap",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E2_double_ear_oo": {
+  "shot": "E2_double_ear",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E2_gap_double_open": {
+  "shot": "E2_gap",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E2_double_ear_open": {
+  "shot": "E2_double_ear",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ }
+}

@@ -48,7 +48,7 @@ pauses = [(max(0, s), en, d) for s, (en, d) in zip(starts, ends)]
 
 name = os.path.basename(VO)
 checks = [
-    ("Same narrator voice in file name", EP01["voice"] in name, f"`{EP01['voice']}` (EP01)"),
+    ("Same narrator voice in file name", EP01["voice"] in name.replace("_", " "), f"`{EP01['voice']}` (EP01)"),
     ("Eleven v3", EP01["model"] in name, "eleven_v3"),
     ("Mono 44.1 kHz like EP01", sr == EP01["sr"] and ch == EP01["ch"], f"{sr} Hz, {ch} ch"),
     ("Loudness near EP01 (−16.6 LUFS ± 2)", abs(lufs - EP01["lufs"]) <= 2, f"{lufs:.1f} LUFS"),

@@ -145,10 +145,40 @@ def sfx_lock_clack():
     return norm(x, .95)
 
 
+# ---- EP02 additions (appended after the EP01 set so the EP01 one-shots stay bit-identical)
+def sfx_door_creak():  # door straining against the frame
+    d = 2.2; t = t_(d)
+    f = 70 + 25 * np.sin(2 * np.pi * 0.6 * t) + 15 * rng.standard_normal(len(t)).cumsum() / np.sqrt(len(t))
+    stick = (np.sin(2 * np.pi * np.cumsum(f) / SR) > 0.6).astype(float)
+    x = lp(hp(noise(d), 300), 1600) * lp(stick, 400) * env(len(t), .15, 1.6, 2)
+    x += np.sin(2 * np.pi * np.cumsum(f * 2.1) / SR) * env(len(t), .2, 1.5, 2) * .25
+    return norm(x, .7)
+def sfx_water():  # slow trickle + drips
+    d = 3.2; t = t_(d)
+    x = lp(hp(noise(d), 900), 3500) * (0.25 + 0.15 * np.sin(2 * np.pi * 3.3 * t) ** 2) * np.minimum(1, t / 0.8)
+    for st in (0.3, 0.9, 1.35, 2.0, 2.6):
+        n0 = int(st * SR); tt = np.arange(int(.12 * SR)) / SR
+        x[n0:n0 + len(tt)] += np.sin(2 * np.pi * (900 + 1400 * np.exp(-tt * 40)) * tt) * np.exp(-tt * 45) * .8
+    return norm(x * env(len(t), .3, 3.0, 1.2), .5)
+def sfx_scream():  # short muffled cry behind a door (formant-filtered buzz, low-passed)
+    d = 1.1; t = t_(d)
+    f0 = 300 + 140 * np.sin(np.pi * np.minimum(1, t / 0.55)) - 120 * np.maximum(0, t - 0.55)
+    src = np.sign(np.sin(2 * np.pi * np.cumsum(f0 * (1 + 0.01 * np.sin(2 * np.pi * 6 * t))) / SR))
+    x = sum(lp(hp(src, fc * 0.8), fc * 1.2) * g for fc, g in ((800, 1.0), (1200, .6), (2600, .25)))
+    x += hp(noise(d), 1500) * .15
+    x = lp(x, 1400)  # through the door
+    return norm(x * env(len(t), .03, .9, 2.2), .8)
+def sfx_tap():  # finger on glass
+    d = 0.15; t = t_(d)
+    x = lp(noise(d), 3000) * env(len(t), .0005, .012, 8) + np.sin(2 * np.pi * 180 * t) * env(len(t), .001, .03, 6) * .5
+    return norm(x, .6)
+
+
 SFX_FUNCS = dict(knock=sfx_knock, bang=sfx_bang, hit=sfx_hit, boom_tail=sfx_boom_tail, vibrate=sfx_vibrate, notify=sfx_notify,
                  notify_bad=sfx_notify_bad, coin=sfx_coin, alarm=sfx_alarm, tick=lambda: sfx_tick(False), tick_hard=lambda: sfx_tick(True),
                  glass=sfx_glass, peep=sfx_peep, tube_on=sfx_tube_on, creak=sfx_creak, slap=sfx_slap, whisper=sfx_whisper,
-                 lock_click=sfx_lock_click, lock_turn=sfx_lock_turn, lock_clack=sfx_lock_clack)
+                 lock_click=sfx_lock_click, lock_turn=sfx_lock_turn, lock_clack=sfx_lock_clack,
+                 door_creak=sfx_door_creak, water=sfx_water, scream=sfx_scream, tap=sfx_tap)
 
 
 # ------------------------------------------------------------------ music
@@ -177,11 +207,12 @@ def music(dur):
     beat *= np.clip((lvl - 0.3) / 0.4, 0, 1)
     # 4) glassy motif in the mysterious part (sparse bell notes)
     bell = np.zeros_like(t)
-    for st, f in [(6.2, 987.8), (8.9, 880.0), (12.0, 784.0), (15.4, 740.0), (19.6, 987.8), (23.2, 932.3)]:
+    for st, f in getattr(TL, "BELLS", [(6.2, 987.8), (8.9, 880.0), (12.0, 784.0), (15.4, 740.0), (19.6, 987.8), (23.2, 932.3)]):
         n0 = int(st * SR); n = int(2.5 * SR); tt = np.arange(n) / SR
         bell[n0:n0 + n] += (np.sin(2 * np.pi * f * tt) + 0.3 * np.sin(2 * np.pi * f * 2.76 * tt)) * np.exp(-tt * 2.2)
     # 5) final riser 66.3 -> 75.0
-    rs = np.clip((t - 66.3) / (75.0 - 66.3), 0, 1)
+    r0, r1 = getattr(TL, "RISER", (66.3, 75.0))
+    rs = np.clip((t - r0) / (r1 - r0), 0, 1) * (t < r1 + 0.3)
     riser = hp(noise(dur), 500) * rs ** 2.2 * 0.35
     sweep = np.sin(2 * np.pi * np.cumsum(200 + 900 * rs ** 2) / SR) * rs ** 2 * 0.15
     x = 0.42 * drone * (0.4 + 0.6 * lvl) + 0.22 * cl + 0.55 * beat + 0.16 * bell + riser + sweep
@@ -210,7 +241,7 @@ def db(x): return 10 ** (x / 20)
 
 def main():
     os.makedirs(os.path.join(ROOT, "effects", "sfx"), exist_ok=True)
-    vo_path = glob.glob(os.path.join(ROOT, "audio", "ElevenLabs_*.mp3"))[0]
+    vo_path = sorted(glob.glob(os.path.join(ROOT, "audio", "ElevenLabs_*.mp3")))[0]
     pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", vo_path, "-f", "f32le", "-ac", "1", "-ar", str(SR), "-"], capture_output=True, check=True).stdout
     vo = np.frombuffer(pcm, np.float32).astype(np.float64)
     dur = TL.END
@@ -229,8 +260,8 @@ def main():
         cache[name] = fn(); write_wav(os.path.join(ROOT, "effects", "sfx", f"{name}.wav"), cache[name])
     base_gain = dict(knock=-9, bang=-8, hit=-10, boom_tail=-10, vibrate=-17, notify=-17, notify_bad=-15, coin=-18, alarm=-22,
                      tick=-20, tick_hard=-15, glass=-17, peep=-18, tube_on=-22, creak=-14, slap=-14, whisper=-20,
-                     lock_click=-12, lock_turn=-11, lock_clack=-8)
-    pans = dict(knock=0.0, bang=0.0, vibrate=0.15, glass=-0.1, lock_click=-0.2, lock_turn=-0.2, lock_clack=-0.15, creak=0.25)
+                     lock_click=-12, lock_turn=-11, lock_clack=-8, door_creak=-13, water=-17, scream=-11, tap=-16)
+    pans = dict(knock=0.0, bang=0.0, vibrate=0.15, scream=-0.1, water=0.05, glass=-0.1, lock_click=-0.2, lock_turn=-0.2, lock_clack=-0.15, creak=0.25)
     for t0, kind, g in TL.SFX:
         x = cache[kind] * db(base_gain[kind]) * g
         i0 = int(t0 * SR); i1 = min(N, i0 + len(x)); x = x[: i1 - i0]
