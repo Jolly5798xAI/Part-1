@@ -1,0 +1,2 @@
+Low-poly blocky 3D render, voxel-like characters built from cuboids, cube head with flat pixel-art face, flat-shaded, no outlines, muted palette, soft haze, cinematic thriller lighting, vertical 9:16
+NEGATIVE: photorealism, realistic skin, anime, outlines, text, letters, logos, watermark, extra fingers, readable screen text
