@@ -1,0 +1,314 @@
+{
+ "E3_turn": {
+  "shot": "E3_turn",
+  "w": 1296,
+  "h": 2304,
+  "frames": 24
+ },
+ "E3_hall_empty": {
+  "shot": "E3_hall_empty",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_prints_appear": {
+  "shot": "E3_prints_appear",
+  "w": 1296,
+  "h": 2304,
+  "frames": 40
+ },
+ "E3_prints_path": {
+  "shot": "E3_prints_path",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_step_back": {
+  "shot": "E3_step_back",
+  "w": 1296,
+  "h": 2304,
+  "frames": 40
+ },
+ "E3_invisible": {
+  "shot": "E3_invisible",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_pov_door": {
+  "shot": "E3_pov_door",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1,
+  "screen": [
+   [
+    422,
+    1054
+   ],
+   [
+    1135,
+    1024
+   ],
+   [
+    1184,
+    2523
+   ],
+   [
+    493,
+    2534
+   ]
+  ]
+ },
+ "E3_mirror_wide": {
+  "shot": "E3_mirror_wide",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_mirror": {
+  "shot": "E3_mirror",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_look_back": {
+  "shot": "E3_look_back",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_behind_empty": {
+  "shot": "E3_behind_empty",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_door_outside": {
+  "shot": "E3_door_outside",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_lock_closed": {
+  "shot": "E3_lock_closed",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_prints_bedroom": {
+  "shot": "E3_prints_bedroom",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_approach": {
+  "shot": "E3_approach",
+  "w": 1296,
+  "h": 2304,
+  "frames": 40
+ },
+ "E3_beddoor_close": {
+  "shot": "E3_beddoor_close",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_pov_beddoor": {
+  "shot": "E3_pov_beddoor",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1,
+  "screen": [
+   [
+    475,
+    999
+   ],
+   [
+    1228,
+    1038
+   ],
+   [
+    1134,
+    2589
+   ],
+   [
+    410,
+    2572
+   ]
+  ]
+ },
+ "E3_alex_face_bed": {
+  "shot": "E3_alex_face_bed",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_beddoor_open": {
+  "shot": "E3_beddoor_open",
+  "w": 1296,
+  "h": 2304,
+  "frames": 40
+ },
+ "E3_room_dark": {
+  "shot": "E3_room_dark",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_tied": {
+  "shot": "E3_tied",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_tied_face": {
+  "shot": "E3_tied_face",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_from_chair": {
+  "shot": "E3_from_chair",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_pov_room": {
+  "shot": "E3_pov_room",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1,
+  "screen": [
+   [
+    708,
+    1473
+   ],
+   [
+    1479,
+    1425
+   ],
+   [
+    1551,
+    3014
+   ],
+   [
+    808,
+    3073
+   ]
+  ]
+ },
+ "E3_mirror_shh": {
+  "shot": "E3_mirror",
+  "w": 1296,
+  "h": 2304,
+  "frames": 16
+ },
+ "E3_mirror_point": {
+  "shot": "E3_mirror",
+  "w": 1296,
+  "h": 2304,
+  "frames": 16
+ },
+ "E3_hall_empty_prints": {
+  "shot": "E3_hall_empty",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_mirror_wide_dbl": {
+  "shot": "E3_mirror_wide",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_mirror_dbl": {
+  "shot": "E3_mirror",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_mirror_dbl_close": {
+  "shot": "E3_mirror",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_behind_empty_m": {
+  "shot": "E3_behind_empty",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_prints_bedroom_leak": {
+  "shot": "E3_prints_bedroom",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_beddoor_close_dim": {
+  "shot": "E3_beddoor_close",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_tied_face_eyes": {
+  "shot": "E3_tied_face",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_tied_face_tears": {
+  "shot": "E3_tied_face",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_tied_face_tears_eyes": {
+  "shot": "E3_tied_face",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_tied_head_l": {
+  "shot": "E3_tied_face",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_tied_head_c": {
+  "shot": "E3_tied_face",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_tied_head_r": {
+  "shot": "E3_tied_face",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E3_pov_room_close": {
+  "shot": "E3_pov_room",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1,
+  "screen": [
+   [
+    394,
+    1037
+   ],
+   [
+    1144,
+    998
+   ],
+   [
+    1212,
+    2573
+   ],
+   [
+    485,
+    2597
+   ]
+  ]
+ }
+}
