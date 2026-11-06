@@ -121,7 +121,7 @@ MSG_MIRROR = "Неповиновение зафиксировано."           
 MSG_FIND = "Найди комнату двести четыре."
 MSG_REWARD = "Награда — сто тысяч долларов."
 MSG_CREATOR = "С возвращением, создатель."
-T_WAKE, T_FIND, T_REWARD, T_ON = 26.05, 28.12, 30.27, 73.35
+T_WAKE, T_FIND, T_REWARD, T_ON, T_CREATOR = 26.05, 28.12, 30.27, 73.35, 78.08
 PHONE = {
     # EP04's last frame: the voice message has played to the end
     "voice_tail": [(0, ("header", "Номер скрыт")), (0, ("photo_msg", "E4_sister_photo")), (0, ("bubble_red", MSG_NEXT)), (0, ("voice", (-3.10, 3.10)))],
@@ -129,8 +129,9 @@ PHONE = {
     "dead": [(0, ("crack", 7)), (0, ("off", None))],
     "task": [(0, ("header", "Номер скрыт")), (0, ("bubble_small", MSG_MIRROR)), (0, ("crack", 7)), (T_WAKE, ("typing", None)),
              (T_FIND, ("bubble_red", MSG_FIND)), (T_REWARD, ("bubble_red", MSG_REWARD))],
-    # every phone in room 204 — all lit at once on «все экраны» (73.34)
-    "creator": [(0, ("header", "Номер скрыт")), (T_ON, ("bubble_red", MSG_CREATOR))],
+    # every phone in room 204 — all lit at once on «все экраны» (73.34), all «typing…»; the message lands on every screen
+    # at the same instant the VO quotes it («С возвращением…», 78.08)
+    "creator": [(0, ("header", "Номер скрыт")), (T_ON, ("typing", None)), (T_CREATOR, ("bubble_red", MSG_CREATOR))],
 }
 
 # jolts -> camera shake (fx "shake_hits"): the chair rocking as the double screams, the lock clacking open
@@ -198,7 +199,7 @@ SFX = (
     + [(t, "step", 0.4) for t in (58.18, 58.62, 59.06, 59.50)]
     + [(59.75, "sting_soft", 0.6), (64.20, "breath", 0.5)]
     + [(66.90, "lock_insert", 1.0), (67.62, "lock_clack", 0.7), (68.15, "door_open", 1.0), (70.20, "sting_soft", 0.4)]
-    + [(T_ON, "phones_chorus", 1.0), (T_ON + 0.01, "sting", 0.6), (79.45, "sting", 0.7)]
+    + [(T_ON, "phones_chorus", 1.0), (T_ON + 0.01, "sting", 0.6), (T_CREATOR, "notify_bad", 0.7), (79.45, "sting", 0.7)]
     + [(81.60, "cloth", 0.35), (82.20, "sting_soft", 0.8), (82.30, "breath", 0.6)]
     + [(CUT_TO_BLACK, "boom_tail", 0.9), (CUT_TO_BLACK, "sting", 0.6)]
 )

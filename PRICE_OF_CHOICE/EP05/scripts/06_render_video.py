@@ -122,7 +122,7 @@ def screens_overlay(img, src, state, t):
     quads = META.get(src, {}).get("screens")
     if not quads: return img
     ui = phone_ui.draw_screen(TL.PHONE[state], t).convert("RGB")
-    ui = ImageEnhance.Brightness(ui).enhance(1.9).convert("RGBA")
+    ui = Image.blend(ImageEnhance.Brightness(ui).enhance(1.6), Image.new("RGB", ui.size, (120, 150, 215)), 0.42).convert("RGBA")
     small = ui.resize((ui.width // 3, ui.height // 3), Image.LANCZOS)
     sx = img.width / META[src]["w"]; sy = img.height / META[src]["h"]
     base = img.convert("RGBA")
@@ -134,7 +134,12 @@ def screens_overlay(img, src, state, t):
         loc = [(x - x0, y - y0) for x, y in qq]
         coeffs = perspective_coeffs(loc, [(0, 0), (small.width, 0), (small.width, small.height), (0, small.height)])
         base.alpha_composite(small.transform((x1 - x0, y1 - y0), Image.PERSPECTIVE, coeffs, Image.BICUBIC), (x0, y0))
-    return base.convert("RGB")
+    # every screen throws light: a soft cold halo round each quad (screen glow, like the 3D emissive screens)
+    glow = Image.new("RGB", (img.width // 6, img.height // 6)); gd = ImageDraw.Draw(glow)
+    for q in quads: gd.polygon([(x * sx / 6, y * sy / 6) for x, y in q], fill=(150, 185, 255))
+    glow = glow.filter(ImageFilter.GaussianBlur(7)).resize(img.size, Image.BILINEAR)
+    out = np.asarray(base.convert("RGB"), np.float32) + np.asarray(glow, np.float32) * 0.55
+    return Image.fromarray(np.clip(out, 0, 255).astype(np.uint8))
 
 
 def light_gain(t):

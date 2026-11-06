@@ -63,7 +63,8 @@ Key: **EP04** = frame from EP04, used unchanged (read from `../EP04/scenes`). **
 | 26.05 | Alex's cracked phone wakes, typing… (the old «Неповиновение зафиксировано.» above) | — |
 | 28.12 | same phone, red bubble | «Найди комнату двести четыре.» |
 | 30.27 | same phone, red bubble | «Награда — сто тысяч долларов.» |
-| 73.35 | all 35 phones on the table in room 204, at once | «С возвращением, создатель.» |
+| 73.35 | all 35 phones on the table in room 204 light at once, every one «typing…» | — |
+| 78.08 | on every phone at the same instant, as the VO quotes it | «С возвращением, создатель.» |
 | 9.2–12.2 | key fob (3D pixel digits) | 204 |
 | 54.8–58.1, 59.6–70 | door plate (3D pixel digits, the EP04 plate) | 204 |
 
@@ -77,7 +78,7 @@ No message appears before the words that announce it (checked by `scripts/07_qc.
 * **The voice behind 204.** Alex's own voice is heard while the camera shows the strip of light under the door broken by the shadows of
   two feet — someone is standing right behind it — then Alex's face in the red light.
 * **Dozens of phones.** The table is shown dark first; on «все экраны» every screen lights in the same frame with a cold flash and a
-  chord of detuned chimes; then the message on all of them, then one phone close enough to read.
+  chord of detuned chimes; every screen shows «typing…», and the message lands on all of them at the instant the VO quotes it, on a phone close enough to read.
 * **The sister.** She steps out of the dark doorway behind Alex, lit by the phones; her line is lip-synced to the approved VO (narrator's
   voice, as approved — no second voice). Hard cut to black on «игру?». Nothing is explained.
 

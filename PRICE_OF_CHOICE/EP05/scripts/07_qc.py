@@ -40,8 +40,10 @@ ok("Full decode without errors (playback test)", dec.returncode == 0 and not dec
 # black frames: only the intended cut to black / end card may be black
 bd = run(["ffmpeg", "-hide_banner", "-nostats", "-i", MP4, "-vf", "blackdetect=d=0.1:pic_th=0.98:pix_th=0.06", "-an", "-f", "null", "-"]).stderr
 blacks = [(float(s), float(e)) for s, e in re.findall(r"black_start:([\d.]+) black_end:([\d.]+)", bd)]
-bad = [b for b in blacks if b[0] < TL.CUT_TO_BLACK - 0.1]
-ok("No unintended black frames", not bad, f"black only {', '.join(f'{s:.2f}–{e:.2f}' for s, e in blacks) or '—'} (cut to black at {TL.CUT_TO_BLACK})")
+BO = getattr(TL, "BLACKOUT", None)   # EP05: the scripted blackout («Свет погас») is the only black allowed before the cut
+intended = lambda s_, e_: s_ >= TL.CUT_TO_BLACK - 0.1 or (BO and s_ >= BO[0] - 0.1 and e_ <= BO[3] + 0.1)
+bad = [b for b in blacks if not intended(*b)]
+ok("No unintended black frames", not bad, f"black only {', '.join(f'{s:.2f}–{e:.2f}' for s, e in blacks) or '—'} (scripted blackout {BO[1] if BO else '—'}–{BO[2] if BO else '—'}, cut to black at {TL.CUT_TO_BLACK})")
 fz = run(["ffmpeg", "-hide_banner", "-nostats", "-i", MP4, "-vf", "freezedetect=n=0.0005:d=2.5", "-an", "-f", "null", "-"]).stderr
 freezes = re.findall(r"freeze_start: ([\d.]+)", fz)
 fr_bad = [float(f) for f in freezes if float(f) < TL.CUT_TO_BLACK - 0.1]
