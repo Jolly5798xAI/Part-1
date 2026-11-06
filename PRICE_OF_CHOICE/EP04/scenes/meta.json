@@ -1,0 +1,386 @@
+{
+ "E4_approach": {
+  "shot": "E4_approach",
+  "w": 1296,
+  "h": 2304,
+  "frames": 30
+ },
+ "E4_scars": {
+  "shot": "E4_scars",
+  "w": 1296,
+  "h": 2304,
+  "frames": 20
+ },
+ "E4_tape_off": {
+  "shot": "E4_tape_off",
+  "w": 1296,
+  "h": 2304,
+  "frames": 16
+ },
+ "E4_step_back": {
+  "shot": "E4_step_back",
+  "w": 1296,
+  "h": 2304,
+  "frames": 20
+ },
+ "E4_phone_throw": {
+  "shot": "E4_phone_throw",
+  "w": 1296,
+  "h": 2304,
+  "frames": 16
+ },
+ "E4_lean": {
+  "shot": "E4_lean",
+  "w": 1296,
+  "h": 2304,
+  "frames": 16
+ },
+ "E4_doorway_steps": {
+  "shot": "E4_doorway_steps",
+  "w": 1296,
+  "h": 2304,
+  "frames": 24
+ },
+ "E4_boots": {
+  "shot": "E4_boots",
+  "w": 1296,
+  "h": 2304,
+  "frames": 24
+ },
+ "E4_grab": {
+  "shot": "E4_grab",
+  "w": 1296,
+  "h": 2304,
+  "frames": 12
+ },
+ "E4_alex_turn": {
+  "shot": "E4_alex_turn",
+  "w": 1296,
+  "h": 2304,
+  "frames": 16
+ },
+ "E4_cop_raise": {
+  "shot": "E4_cop_raise",
+  "w": 1296,
+  "h": 2304,
+  "frames": 16
+ },
+ "E4_scar_dbl": {
+  "shot": "E4_scars",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E4_dbl_talk_neutral": {
+  "shot": "E4_dbl",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E4_dbl_pale_neutral": {
+  "shot": "E4_dbl",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E4_alex_talk_neutral": {
+  "shot": "E4_alex",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E4_dbl_talk_open": {
+  "shot": "E4_dbl",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E4_dbl_pale_open": {
+  "shot": "E4_dbl",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E4_alex_talk_open": {
+  "shot": "E4_alex",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E4_dbl_talk_ee": {
+  "shot": "E4_dbl",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E4_dbl_pale_ee": {
+  "shot": "E4_dbl",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E4_alex_talk_ee": {
+  "shot": "E4_alex",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E4_dbl_talk_oo": {
+  "shot": "E4_dbl",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E4_dbl_pale_oo": {
+  "shot": "E4_dbl",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E4_alex_talk_oo": {
+  "shot": "E4_alex",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E4_dbl_gasp": {
+  "shot": "E4_dbl",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E4_dbl_eyes": {
+  "shot": "E4_dbl",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E4_dbl_pale_wide": {
+  "shot": "E4_dbl",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E4_dbl_look": {
+  "shot": "E4_dbl",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E4_alex_wide": {
+  "shot": "E4_alex",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E4_pov_chair": {
+  "shot": "E4_pov_chair",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1,
+  "screen": [
+   [
+    733,
+    1465
+   ],
+   [
+    1314,
+    1428
+   ],
+   [
+    1369,
+    2626
+   ],
+   [
+    808,
+    2670
+   ]
+  ]
+ },
+ "E4_pov_chair_close": {
+  "shot": "E4_pov_chair",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1,
+  "screen": [
+   [
+    497,
+    1137
+   ],
+   [
+    1062,
+    1107
+   ],
+   [
+    1113,
+    2294
+   ],
+   [
+    565,
+    2312
+   ]
+  ]
+ },
+ "E4_phone_floor": {
+  "shot": "E4_phone_floor",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1,
+  "screen": [
+   [
+    38,
+    983
+   ],
+   [
+    657,
+    555
+   ],
+   [
+    1592,
+    1892
+   ],
+   [
+    951,
+    2332
+   ]
+  ]
+ },
+ "E4_mirror_far": {
+  "shot": "E4_mirror_far",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1,
+  "quad": [
+   [
+    425,
+    625
+   ],
+   [
+    1349,
+    652
+   ],
+   [
+    1332,
+    2124
+   ],
+   [
+    437,
+    2183
+   ]
+  ]
+ },
+ "E4_mirror_close": {
+  "shot": "E4_mirror_close",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1,
+  "quad": [
+   [
+    136,
+    288
+   ],
+   [
+    1408,
+    400
+   ],
+   [
+    1395,
+    2437
+   ],
+   [
+    152,
+    2585
+   ]
+  ]
+ },
+ "E4_room204": {
+  "shot": "E4_room204",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E4_room204_wide": {
+  "shot": "E4_room204",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E4_cop_doorway": {
+  "shot": "E4_cop_doorway",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E4_cop_mask": {
+  "shot": "E4_cop_doorway",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "E4_cop_phone": {
+  "shot": "E4_cop_phone",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1,
+  "screen": [
+   [
+    1025,
+    1185
+   ],
+   [
+    1531,
+    1165
+   ],
+   [
+    1566,
+    2243
+   ],
+   [
+    1066,
+    2270
+   ]
+  ]
+ },
+ "E4_cop_phone_close": {
+  "shot": "E4_cop_phone",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1,
+  "screen": [
+   [
+    453,
+    513
+   ],
+   [
+    1342,
+    473
+   ],
+   [
+    1404,
+    2361
+   ],
+   [
+    535,
+    2384
+   ]
+  ]
+ },
+ "E4_sister_photo": {
+  "shot": "E4_sister_photo",
+  "w": 1620,
+  "h": 2880,
+  "frames": 1
+ },
+ "REF_sister": {
+  "shot": "REF_sister",
+  "w": 1600,
+  "h": 1100,
+  "frames": 1
+ },
+ "REF_masked_cop": {
+  "shot": "REF_masked_cop",
+  "w": 1600,
+  "h": 1100,
+  "frames": 1
+ }
+}
