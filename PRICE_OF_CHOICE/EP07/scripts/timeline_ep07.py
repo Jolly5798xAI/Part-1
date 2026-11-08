@@ -46,14 +46,14 @@ T_DATE, T_TOMORROW = 98.86, 100.18
 MTEXT = dict(text="Выбор сделан", scramble=T_MTEXT, legible=T_MTEXT_OK)
 SHOTS = [
     # --- 1. FIVE SECONDS (EP06's last shot continues: her phone, the choice)
-    dict(t=(0.00, 1.68), src="E6_show_cold", sub="top", cam=((.76, .70, 1.85), (.75, .66, 1.98)), phone="hers", fx=["handshake", "redglow"]),
+    dict(t=(0.00, 1.68), src="E6_show_cold", sub="bottom", cam=((.76, .70, 1.85), (.75, .66, 1.98)), phone="hers", fx=["handshake", "redglow"]),
     dict(t=(1.68, 3.50), src="E6_sis_cold", cam=((.5, .44, 1.05), (.5, .43, 1.28)), fx=["redglow"]),
     dict(t=(3.50, 6.25), src="E7_phone_pov", sub="top", cam=((.5, .62, 1.0), (.5, .64, 1.16)), phone="mine"),
     dict(t=(6.25, 8.35), src="E7_sisc_neutral", cam=((.5, .45, 1.0), (.5, .44, 1.14)), fx=["redglow"]),
     dict(t=(8.35, 10.95), src="E7_reach", anim=(0.0, 1.0), anim_start=8.50, anim_dur=1.75, sub="top", cam=((.5, .62, 1.0), (.5, .63, 1.1)), phone="mine"),
     # --- 2. «ВЫБИРАЙ СЕБЯ» / «НЕ НАЖИМАЙ!»
-    dict(t=(10.95, 12.70), src="LIPSYNC", lips="E7_sisc", sub="bottom", cam=((.5, .44, 1.08), (.5, .43, 1.2))),
-    dict(t=(12.70, 14.95), src="LIPSYNC", lips="E7_sisc", sub="bottom", cam=((.5, .42, 1.28), (.5, .42, 1.42)), fx=["redglow"]),
+    dict(t=(10.95, 12.70), src="LIPSYNC", lips="E7_sisc", sub="bottom", cam=((.5, .44, 1.0), (.5, .43, 1.08))),
+    dict(t=(12.70, 14.95), src="LIPSYNC", lips="E7_sisc", sub="bottom", cam=((.5, .42, 1.1), (.5, .42, 1.18)), fx=["redglow"]),
     dict(t=(14.95, 17.35), src="E6_mirror_old", cam=((.47, .4, 1.1), (.45, .38, 1.3)), screens="table5", fx=["glitch"]),
     dict(t=(17.35, 19.05), src="LIPSYNC", lips="E6_old", sub="bottom", cam=((.5, .42, 1.12), (.5, .42, 1.3)), fx=["handshake", "tube"]),
     # --- 3. THE PHONE ON THE FLOOR — 3, 2, 1 — THE SCREENS DIE — SHE IS GONE
@@ -91,15 +91,15 @@ SHOTS = [
     dict(t=(71.00, 72.40), src="E7_press", anim=(0.0, 1.0), anim_start=71.10, anim_dur=0.62, cam=((.5, .5, 1.0), (.5, .5, 1.08)), fx=["cctv"]),
     # --- 8. «ЭКЗЕМПЛЯР СОРОК ВОСЕМЬ НЕСТАБИЛЕН» — «НАЧАТЬ УДАЛЕНИЕ» — THE HAND
     dict(t=(72.40, 75.10), src="E7_wall", monitors="wall", cam=((.5, .5, 1.0), (.5, .5, 1.12))),
-    dict(t=(75.10, 79.45), src="E7_mon_red", monitor="msg", sub="bottom", cam=((.5, .5, 1.0), (.5, .5, 1.12)), fx=["redglow"]),
+    dict(t=(75.10, 79.45), src="E7_mon_red", monitor="msg", sub="top", cam=((.5, .5, 1.0), (.5, .5, 1.12)), fx=["redglow"]),
     dict(t=(79.45, 82.15), src="E7_hand_vanish", anim=(0.0, 1.0), anim_start=T_ERASE, anim_dur=1.6, cam=((.5, .42, 1.0), (.5, .4, 1.1)), fx=["glitch_late"]),
     # --- 9. «НАЙДИ НАСТОЯЩЕГО СЕБЯ» — THE ADDRESS — TOMORROW
-    dict(t=(82.15, 84.85), src="E7_lean", anim=(0.0, 1.0), anim_start=82.90, anim_dur=1.1, cam=((.5, .45, 1.0), (.5, .43, 1.1)), fx=["cctv"]),
-    dict(t=(84.85, 86.90), src="LIPSYNC", lips="E7_feedm", sub="bottom", cam=((.5, .42, 1.1), (.5, .42, 1.2)), fx=["cctv"]),
-    dict(t=(86.90, 89.55), src="LIPSYNC", lips="E7_feedm", sub="bottom", cam=((.5, .40, 1.3), (.5, .40, 1.45)), fx=["cctv"]),
+    dict(t=(82.15, 84.85), src="E7_lean", anim=(0.0, 1.0), anim_start=82.90, anim_dur=1.1, cam=((.5, .48, 1.0), (.5, .55, 1.05)), fx=["cctv"]),
+    dict(t=(84.85, 86.90), src="LIPSYNC", lips="E7_feedm", sub="top", cam=((.5, .6, 1.0), (.5, .6, 1.08)), fx=["cctv"]),
+    dict(t=(86.90, 89.55), src="LIPSYNC", lips="E7_feedm", sub="top", cam=((.5, .62, 1.12), (.5, .62, 1.22)), fx=["cctv"]),
     dict(t=(89.55, 93.90), src="E7_mon", monitor="addr", sub="bottom", cam=((.5, .5, 1.0), (.5, .5, 1.1))),
     dict(t=(93.90, 97.70), src="E7_mon", monitor="addr", sub="bottom", cam=((.5, .48, 1.15), (.5, .47, 1.3))),
-    dict(t=(97.70, CUT_TO_BLACK), src="E7_mon", monitor="addr", sub="bottom", cam=((.5, .5, 1.25), (.5, .52, 1.45)), fx=["handshake_late"]),
+    dict(t=(97.70, CUT_TO_BLACK), src="E7_mon", monitor="addr", sub="top", cam=((.5, .5, 1.08), (.5, .5, 1.2)), fx=["handshake_late"]),
     dict(t=(CUT_TO_BLACK, END), src="BLACK", fx=["endcard"]),
 ]
 

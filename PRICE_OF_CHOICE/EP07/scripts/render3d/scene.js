@@ -1037,12 +1037,12 @@ function buildOperatorRoom(W, o = {}) {
   const s = sisterSeated(o.face || 'cold', { lean: o.lean ?? 0 }); G.add(s);
   if (o.pressArm) { const a = s.userData.arms[1]; a.rotation.x = -1.15 - 0.15 * press; a.rotation.z = -0.55; a.position.y -= 0.03 * press; }
   // light: her monitor on her face (cold), a red rim from the racks
-  const lf = new THREE.PointLight('#bcd8ff', 1.2, 2.2, 1.6); lf.position.set(0, 1.15, 0.7); G.add(lf);
+  const lf = new THREE.PointLight('#bcd8ff', 1.2 * (1 - 0.85 * (o.lean ?? 0)), 2.2, 1.6); lf.position.set(0, 1.15, 0.7); G.add(lf);
   const lr = new THREE.PointLight('#ff3a2e', 0.7, 2.6, 1.6); lr.position.set(0.6, 1.6, -0.9); G.add(lr);
   const fill = new THREE.PointLight('#5a6878', 0.9, 4.5, 1.2); fill.position.set(0, 2.2, 0.9); G.add(fill);   // local fill (no global light: room 204 keeps its look)
   G.updateMatrixWorld(true);
   const cam = new THREE.PerspectiveCamera(o.fov ?? 34, 1.6, 0.01, 30);
-  cam.position.copy(G.localToWorld(new THREE.Vector3(0, 1.3, 0.83))); cam.lookAt(G.localToWorld(new THREE.Vector3(0, 1.32 - 0.07 * (o.lean ?? 0), 0.1)));
+  cam.position.copy(G.localToWorld(new THREE.Vector3(0, 1.3, 0.83))); cam.lookAt(G.localToWorld(new THREE.Vector3(0, 1.32 - 0.22 * (o.lean ?? 0), 0.1)));
   return { s, cam, G, btn };
 }
 // Alex's forearm for EP07 (EP04 makeForearm + the same EP04 scar): o.num 0..1 the number «48» surfacing on the inner

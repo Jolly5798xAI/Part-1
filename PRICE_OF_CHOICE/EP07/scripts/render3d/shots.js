@@ -1446,7 +1446,7 @@
     E7_sisc: { desc: 'Close-up: the sister, cold, red light from the phones', make(W, t, A) {
       room7(W, { lit: true, mirror: 'none' }); const s = sis6(W, SIS2[0], SIS2[1], W.p.face || 'cold'); faceTo(s, ALEX_M[0], ALEX_M[1]);
       lamp(W, '#ff6a58', 0.5, [SIS2[0] + 0.25, 1.1, SIS2[1] + 0.35], 1.4); lamp(W, '#b9c9d6', 0.35, [-0.1, 1.6, ZE - 0.45], 2.0);
-      return camera(34, V(0.22, 1.52, ZE - 0.38), V(SIS2[0], 1.53, SIS2[1]), A);
+      return camera(48, V(0.22, 1.52, ZE - 0.38), V(SIS2[0], 1.5, SIS2[1]), A);
     } },
     // ANIM: low on the floor — the phone falls into frame, hits the floor and bounces (its screen still lit)
     E7_throw: { desc: 'Floor level: Alex throws the phone down; it smacks onto the floor and bounces', frames: 20, make(W, t, A) {
@@ -1597,12 +1597,16 @@
     } },
     // ANIM (press 0..1): macro — her finger comes down on the red console button
     E7_press: { desc: 'Macro: the sister\'s finger presses the red button on her desk', frames: 12, make(W, t, A) {
-      const k = W.p.press ?? 1, e = k < 0.6 ? 0 : Math.min(1, (k - 0.6) / 0.25);
-      const O = opsFeed(W, { face: 'cold', press: e });
-      O.s.userData.arms[1].visible = false; O.s.userData.arms[-1].visible = false;
-      const G = O.G, bp = G.localToWorld(V(0.33, 0.86 - 0.02 * e + 0.12 * (1 - Math.min(1, k / 0.6)), 0.48 - 0.06 * (1 - Math.min(1, k / 0.6))));
-      forearm(W, P.PAL.sweater, G.localToWorld(V(0.3, 1.2, 0.05)), bp);
-      return camera(42, G.localToWorld(V(0.62, 1.1, 0.78)), G.localToWorld(V(0.3, 0.82, 0.45)), A);
+      const k = W.p.press ?? 1, e = k < 0.6 ? 0 : Math.min(1, (k - 0.6) / 0.25), d = 1 - Math.min(1, k / 0.6);
+      const O = opsFeed(W, { face: 'cold', press: e }); const G = O.G;
+      const hand = new THREE.Group(); G.add(hand); const skin = P.M(P.PAL.skinAlex);
+      hand.position.set(0.33, 0.9 + 0.1 * d - 0.012 * e, 0.42 - 0.08 * d); hand.rotation.x = 0.25;
+      P.box(0.1, 0.035, 0.1, skin, 0, 0.0, -0.03, hand);                                     // back of the hand
+      P.box(0.024, 0.06, 0.024, skin, 0.0, -0.035, 0.03, hand);                              // the index finger, down on the button
+      for (const x of [-0.03, 0.03]) P.box(0.022, 0.035, 0.05, skin, x, -0.02, 0.005, hand);  // curled fingers
+      P.box(0.12, 0.1, 0.3, P.M(P.PAL.sweater), 0, 0.03, -0.22, hand).rotation.x = -0.35;   // her sleeve
+      const lb = new THREE.PointLight('#ffb0a0', 0.6 + 0.8 * e, 1.0, 1.6); lb.position.copy(G.localToWorld(V(0.33, 1.0, 0.65))); W.scene.add(lb);
+      return camera(40, G.localToWorld(V(0.62, 1.08, 0.8)), G.localToWorld(V(0.32, 0.85, 0.46)), A);
     } },
     // the monitor wall head-on (the editor draws the deletion message on every screen)
     E7_wall: { desc: 'In the monitor room: the whole wall of monitors head-on', make(W, t, A) {
