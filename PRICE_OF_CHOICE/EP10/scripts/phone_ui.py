@@ -955,14 +955,16 @@ def draw_proj10(t):
     d.rectangle([60, 60, MW - 60, 150], fill=(18, 40, 60, 255))
     for i, col in enumerate(((255, 90, 80), (255, 200, 80), (90, 220, 120))): d.ellipse([100 + i * 60, 88, 134 + i * 60, 122], fill=col + (255,))
     s1 = _typed(TL.MSG_PROJ, t, TL.T_PROJ, 22)
-    if s1: d.text((cx, 380), s1, font=F("Rubik-Bold.ttf", 132), fill=(235, 245, 255, 255), anchor="mm")
-    if t >= TL.T_CREATOR:
-        d.text((cx - 40, 640), "Создатель:", font=F("Rubik-Medium.ttf", 104), fill=(170, 200, 230, 255), anchor="rm")
+    fP, fC, fN = F("Rubik-Bold.ttf", 92), F("Rubik-Medium.ttf", 74), F("Rubik-Bold.ttf", 84)
+    if s1: d.text((cx - d.textlength(TL.MSG_PROJ, font=fP) / 2, 400), s1, font=fP, fill=(235, 245, 255, 255), anchor="lm")
+    wC, wN = d.textlength("Создатель: ", font=fC), d.textlength("Елена", font=fN); x0 = cx - (wC + wN) / 2
+    if t >= TL.T_CREATOR: d.text((x0, 600), "Создатель: ", font=fC, fill=(170, 200, 230, 255), anchor="lm")
     if t >= TL.T_NAME:
         a = min(1.0, (t - TL.T_NAME) / 0.08)
-        d.text((cx + 10, 640), "Елена", font=F("Rubik-Bold.ttf", 120), fill=(255, 70, 60, int(255 * a)), anchor="lm")
-    if t < TL.T_PROJ - 0.0 or (int(t * 2.5) % 2 == 0 and t < TL.T_CREATOR):   # the cursor
-        d.rectangle([cx + (d.textlength(s1, font=F("Rubik-Bold.ttf", 132)) // 2 if s1 else 0) + 14, 320, cx + (d.textlength(s1, font=F("Rubik-Bold.ttf", 132)) // 2 if s1 else 0) + 34, 440], fill=(235, 245, 255, 255))
+        d.text((x0 + wC, 600), "Елена", font=fN, fill=(255, 70, 60, int(255 * a)), anchor="lm")
+    if t < TL.T_CREATOR and int(t * 2.5) % 2 == 0:                     # the cursor
+        xc = cx - d.textlength(TL.MSG_PROJ, font=fP) / 2 + (d.textlength(s1, font=fP) if s1 else 0) + 10
+        d.rectangle([xc, 355, xc + 16, 445], fill=(235, 245, 255, 255))
     _scan(im, 30)
     return im
 

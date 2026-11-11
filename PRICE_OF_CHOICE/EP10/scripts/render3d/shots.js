@@ -2295,7 +2295,7 @@
       flat10(W, {});
       const e = t * t * (3 - 2 * t); cast10(W, { cop: 'aim', aim: e, a48Rot: yaw(A10, COP10) + 0.1 });
       lamp(W, '#ff4a3a', 0.35 + 0.35 * e, [0.35, 1.45, 1.4], 1.8);
-      return camera(48, V(-0.6, 1.64, 3.62), V(0.2, 1.28, 1.35), A);
+      return camera(50, V(-0.66, 1.6, 2.3), V(0.25, 1.3, 1.05), A);   // from beside ALEX_48, along the hall wall
     } },
     // ALEX_ZERO close, lit red by the phone pointed at him, not moving; params: face, head (rx), num0 always on
     E10_zero: { desc: 'ALEX_ZERO close, the phone\'s red light on his face; he does not move', make(W, t, A) {
@@ -2357,7 +2357,7 @@
       const cam = camera(40, V(-0.35, 1.45, 2.95), V(-0.2, 1.0, 1.9), A); W.scene.add(cam);
       const a = wristRig(W, cam, { num: 1, clear: 0.15, light: 0.5, lightCol: '#ffb4a6' });
       W.scene.updateMatrixWorld(true);
-      const k = 0.42 + 0.14 * (W.p.k ?? 1), tip = a.localToWorld(V(0, -0.62, 0)), root = a.localToWorld(V(0, -0.05, 0)), d = root.clone().sub(tip).normalize();
+      const k = 0.3 + 0.1 * (W.p.k ?? 1), tip = a.localToWorld(V(0, -0.62, 0)), root = a.localToWorld(V(0, -0.05, 0)), d = root.clone().sub(tip).normalize();
       P.dissolve(a, k, { dir: d, a: tip.dot(d), b: root.dot(d), cell: 60, sweep: 0.3, glow: '#5fe6ff' });
       lamp(W, '#ff4a3a', 0.4, [0.1, 1.4, 2.2], 1.6);
       return cam;
@@ -2365,9 +2365,9 @@
     // ANIM (step): from the bedroom-door side — the officer steps up to ALEX_48 and holds the phone out to him
     E10_cop_give: { desc: 'The officer steps up to ALEX_48 and holds his phone out to him', frames: 16, make(W, t, A) {
       flat10(W, {});
-      cast10(W, { cop: 'give', step: t, a49: false });
-      lamp(W, '#ff4a3a', 0.35, [-0.1, 1.4, 2.1], 1.4);
-      return camera(44, V(0.95, 1.52, 2.75), V(-0.25, 1.28, 1.95), A);
+      cast10(W, { cop: 'give', step: t, a49: false, a48: false });
+      lamp(W, '#ff4a3a', 0.35, [-0.1, 1.4, 2.1], 1.4); lamp(W, '#cfdcff', 0.4, [-0.35, 1.5, 2.55], 1.6);
+      return camera(50, V(-0.5, 1.52, 3.55), V(-0.15, 1.25, 1.6), A);    // ALEX_48's POV: the officer walks up to him, phone held out
     } },
     // ANIM (k): the press — low close on ALEX_48's right hand: the thumb comes down on the screen; the screen goes from cold to red
     E10_press: { desc: 'Close: ALEX_48\'s thumb presses the screen; the phone glows red', frames: 14, make(W, t, A) {
@@ -2379,7 +2379,7 @@
       const u = Math.min(1, k / 0.55), th = P.box(0.03, 0.03, 0.075, P.M(P.PAL.skinAlex), -0.03 + 0.03 * u, 0.04 - 0.035 * u, 0.04 - 0.028 * u, ph); th.rotation.x = 0.3;
       const l = new THREE.PointLight(red ? '#ff3a30' : '#bcd2ff', red ? 0.9 : 0.45, 1.1, 1.6); l.position.set(0, -0.62, 0.2); Rr.add(l);
       W.scene.updateMatrixWorld(true); const pp = ph.getWorldPosition(V(0, 0, 0));
-      return camera(38, V(pp.x - 0.42, pp.y + 0.22, pp.z - 0.38), V(pp.x, pp.y + 0.04, pp.z), A);
+      return camera(46, V(A10[0] + 0.04, 1.6, A10[1] - 0.16), V(pp.x, pp.y, pp.z), A);   // ALEX_48's own eyes, looking down at his thumb on the phone
     } },
     // ANIM (k): ALEX_ZERO turns sharply toward the phones (over ALEX_48's shoulder)
     E10_zero_turn: { desc: 'ALEX_ZERO turns sharply toward the phones', frames: 14, make(W, t, A) {
@@ -2388,7 +2388,7 @@
       const r0 = yaw(Z10, COP10B), r1 = yaw(Z10, A10) + 0.15;
       const R = cast10(W, { cop: 'empty', a49: false, zeroRot: r0 + (r1 - r0) * e, zeroFace: e > 0.5 ? 'wide_pale' : 'pale', a48Phone: true, a48Rot: yaw(A10, Z10) });
       lamp(W, '#bcd2ff', 0.5, [0.1, 1.4, 2.6], 1.4);
-      return camera(40, V(-0.25, 1.66, 3.35), V(0.5, 1.42, 2.35), A);
+      return camera(42, V(-0.05, 1.75, 3.4), V(0.52, 1.42, 2.35), A);
     } },
     // ANIM (k): POV of ALEX_48 — ALEX_ZERO begins to disappear: blocks blink out from his feet up with EP07's cyan edge
     E10_zero_vanish: { desc: 'POV of ALEX_48: ALEX_ZERO starts to disappear, block by block', frames: 20, make(W, t, A) {
@@ -2396,7 +2396,7 @@
       const k = W.p.k ?? 1;
       cast10(W, { cop: 'empty', a48: false, zeroRot: yaw(Z10, A10) + 0.15, zeroFace: 'wide_pale', vanish: 0.05 + 0.5 * k, zeroHead: -0.05 });
       lamp(W, '#5fe6ff', 0.3 + 0.5 * k, [0.45, 0.6, 2.6], 1.4); lamp(W, '#cfdcff', 0.35, [0.1, 1.7, 2.6], 1.6);
-      return camera(44, V(-0.3, 1.55, 2.78), V(0.52, 1.12, 2.35), A);
+      return camera(52, V(-0.55, 1.45, 3.9), V(0.52, 1.0, 2.35), A);
     } },
     // ANIM (kneel): the officer drops to his knees in front of ALEX_48 (seen from ALEX_48's side)
     E10_cop_kneel: { desc: 'The officer drops to his knees', frames: 16, make(W, t, A) {
@@ -2404,7 +2404,7 @@
       const k = W.p.kneel ?? 1, e = Math.min(1, k * k * 1.3);
       cast10(W, { cop: 'kneel', kneel: e, a48: false, zero: false, a49: false, copFace: 'old_worried', copHead: 0 });
       lamp(W, '#cfdcff', 0.5, [-0.35, 1.5, 2.55], 1.6);
-      return camera(44, V(-0.5, 1.5, 3.0), V(-0.2, 0.85, 1.75), A);
+      return camera(52, V(-0.55, 1.45, 3.6), V(-0.2, 0.85, 1.75), A);
     } },
     // room 204 as a recording: the security camera high in the corner — the sister at her computer, the lit phones round her
     E10_r204_wide: { desc: 'Room 204 on a recording: the sister at a computer at the table of lit phones', make(W, t, A) {
@@ -2414,7 +2414,7 @@
     // over the sister's shoulder: her monitor (the editor draws «Проект «Алекс»», «Создатель: Елена»); W.p.close: the monitor fills the frame
     E10_r204_mon: { desc: 'Over the sister\'s shoulder: the monitor of the computer in room 204', make(W, t, A) {
       const D = room10(W, {}); W.screen = D.screen; W.scene.updateMatrixWorld(true); const sp = D.screen.getWorldPosition(V(0, 0, 0));
-      if (W.p.close) return camera(36, V(sp.x + 0.06, sp.y + 0.02, sp.z - 0.62), V(sp.x, sp.y, sp.z), A);
+      if (W.p.close) return camera(36, V(sp.x + 0.08, sp.y + 0.03, sp.z - 1.0), V(sp.x, sp.y, sp.z), A);
       return camera(40, V(sp.x + 0.58, sp.y + 0.4, sp.z - 1.25), V(sp.x - 0.02, sp.y - 0.02, sp.z), A);
     } },
     // the sister close, from the webcam on her monitor: she looks straight into the lens (lip-sync stills by face)
@@ -2429,7 +2429,7 @@
     E10_door204: { desc: 'The hotel corridor: creeping up on door 204 under the red lamp, light under the door', frames: 20, make(W, t, A) {
       corridorWorld(W, { sconces: 2, open: 0, gap: true, fogNear: 4, fogFar: 14, amb: 0.14 });
       const d = W.p.d ?? 1, e = d * (2 - d);
-      return camera(46, V(0.12 - 0.08 * e, 1.5, ZE + 4.6 - 2.4 * e), V(0.0, 1.12, ZE), A);
+      return camera(46, V(0.12 - 0.08 * e, 1.5, ZE + 4.8 - 1.4 * e), V(0.0, 1.12, ZE), A);
     } },
     REF_versions10: { desc: 'Character reference (EP10): ALEX_48, ALEX_49, ALEX_ZERO (half deleted), ALEX_OLD_POLICE kneeling, the sister', ref: true, make(W, t, A) {
       W.scene.background = new THREE.Color('#2a2f38');

@@ -29,8 +29,8 @@ No shot is longer than 4.5 s. Production names (ALEX_48 / ALEX_49 / ALEX_ZERO / 
 | 21 | 54.30–56.70 | LIPSYNC `E10_zero_*` | «Теперь знаешь», — ответил он. | ALEX_ZERO close, the phone's red light on his face; he does not move |
 | 22 | 56.70–59.60 | `E10_cop_give` | Полицейский протянул мне телефон. На экране было два варианта: | The officer steps up to ALEX_48 and holds his phone out to him · animated |
 | 23 | 59.60–63.70 | `E10_pov_choice` | На экране было два варианта: «Уничтожить оригинал», «Остановить игру». | POV of ALEX_48: the phone in his hand, the hall beyond it · phone: choice |
-| 24 | 63.70–65.60 | `E10_press` | Я нажал «Остановить игру», | Close: ALEX_48's thumb presses the screen; the phone glows red · fx: shake_hits; animated |
-| 25 | 65.60–67.45 | `E10_pov_choice` | Я нажал «Остановить игру», и экран стал красным. | POV of ALEX_48: the phone in his hand, the hall beyond it · phone: choice; fx: shake_hits |
+| 24 | 63.70–64.80 | `E10_a48_look` | Я нажал «Остановить игру», | ALEX_48 close, facing the officer; his left hand still coming apart |
+| 25 | 64.80–67.45 | `E10_pov_choice` | Я нажал «Остановить игру», и экран стал красным. | POV of ALEX_48: the phone in his hand, the hall beyond it · phone: choice; fx: shake_hits |
 | 26 | 67.45–69.30 | `E10_pov_close` | «Недостаточно прав». | POV of ALEX_48: the phone in his hand, the hall beyond it · phone: choice; fx: shake_hits, glitch |
 | 27 | 69.30–71.35 | `E10_copf_neutral` | Полицейский впервые испугался. | The officer close-up: old Alex's face under the police cap · fx: handshake |
 | 28 | 71.35–72.75 | LIPSYNC `E10_copf_*` | «Этого не должно быть!» | The officer close-up: old Alex's face under the police cap · fx: handshake |
@@ -41,7 +41,7 @@ No shot is longer than 4.5 s. Production names (ALEX_48 / ALEX_49 / ALEX_ZERO / 
 | 33 | 82.35–84.20 | `E10_pov_close` | Алекс-ноль резко обернулся. На экранах появилось видео. | POV of ALEX_48: the phone in his hand, the hall beyond it · phone: video |
 | 34 | 84.20–87.70 | `E10_r204_wide` | Комната двести четыре. За столом сидела моя сестра. | Room 204 on a recording: the sister at a computer at the table of lit phones · fx: cctv, cap204 |
 | 35 | 87.70–89.40 | `E10_r204_wide` | Перед ней стоял компьютер. | Room 204 on a recording: the sister at a computer at the table of lit phones · fx: cctv |
-| 36 | 89.40–92.20 | `E10_r204_mon` | На мониторе было написано: «Проект «Алекс»». | Over the sister's shoulder: the monitor of the computer in room 204 · monitor: proj10 |
+| 36 | 89.40–92.20 | `E10_r204_mon` | На мониторе было написано: «Проект „Алекс“». | Over the sister's shoulder: the monitor of the computer in room 204 · monitor: proj10 |
 | 37 | 92.20–94.60 | `E10_r204_mon_close` | «Создатель: Елена». | Over the sister's shoulder: the monitor of the computer in room 204 · monitor: proj10; fx: shake_hits |
 | 38 | 94.60–96.65 | `E10_a48_look` | Я посмотрел на Алекса-ноль. | ALEX_48 close, facing the officer; his left hand still coming apart |
 | 39 | 96.65–98.40 | `E10_zero_vanish` | Он начал исчезать. | POV of ALEX_48: ALEX_ZERO starts to disappear, block by block · fx: glitch; animated |

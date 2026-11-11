@@ -75,8 +75,8 @@ SHOTS = [
     # --- 5. THE PHONE HELD OUT — THE CHOICE — «ОСТАНОВИТЬ ИГРУ» — RED — «НЕДОСТАТОЧНО ПРАВ»
     dict(t=(56.70, 59.60), src="E10_cop_give", anim=(0.0, 1.0), anim_start=56.9, anim_dur=2.2, sub="bottom", cam=((.5, .46, 1.0), (.5, .45, 1.08))),
     dict(t=(59.60, 63.70), src="E10_pov_choice", phone="choice", sub="top", cam=((.5, .56, 1.0), (.5, .57, 1.08))),
-    dict(t=(63.70, 65.60), src="E10_press", anim=(0.0, 0.58), anim_start=64.3, anim_dur=1.1, sub="top", cam=((.5, .5, 1.0), (.5, .5, 1.06)), fx=["shake_hits"]),
-    dict(t=(65.60, 67.45), src="E10_pov_choice", phone="choice", sub="top", cam=((.5, .56, 1.06), (.5, .56, 1.12)), fx=["shake_hits"]),
+    dict(t=(63.70, 64.80), src="E10_a48_look", sub="bottom", cam=((.5, .42, 1.06), (.5, .42, 1.12))),
+    dict(t=(64.80, 67.45), src="E10_pov_choice", phone="choice", sub="top", cam=((.5, .57, 1.12), (.5, .56, 1.2)), fx=["shake_hits"]),
     dict(t=(67.45, 69.30), src="E10_pov_close", phone="choice", sub="top", cam=((.5, .56, 1.0), (.5, .56, 1.1)), fx=["shake_hits", "glitch"]),
     # --- 6. THE OFFICER, AFRAID — THE SISTER'S VOICE FROM EVERY PHONE — «ПОТОМУ ЧТО СОЗДАТЕЛЬ — НЕ ОН»
     dict(t=(69.30, 71.35), src="E10_copf_neutral", sub="bottom", cam=((.5, .4, 1.0), (.5, .39, 1.1)), fx=["handshake"]),
@@ -225,7 +225,7 @@ SUBS = [
     (85.86, 87.68, "За столом сидела *моя сестра*."),
     (87.77, 89.35, "Перед ней стоял компьютер."),
     (89.44, 90.95, "На мониторе было написано:"),
-    (91.05, 92.15, "«*Проект «Алекс»*»."),
+    (91.05, 92.15, "«*Проект „Алекс“*»."),
     (92.27, 94.40, "«Создатель: !Елена!»."),
     (94.77, 96.65, "Я посмотрел на Алекса-ноль."),
     (96.78, 98.30, "Он начал !исчезать!."),
