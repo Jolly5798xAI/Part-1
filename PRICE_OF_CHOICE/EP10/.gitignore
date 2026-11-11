@@ -1,8 +1,8 @@
 scripts/render3d/node_modules/
 scenes/*/
 scenes/_jobs.json
-audio/mix_ep09.wav
-audio/music_ep09.wav
+audio/mix_ep10.wav
+audio/music_ep10.wav
 audio/stem_*.wav
 renders/still_*.png
 renders/ui_preview/
