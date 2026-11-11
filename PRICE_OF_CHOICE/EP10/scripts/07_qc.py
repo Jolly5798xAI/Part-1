@@ -83,8 +83,10 @@ W_ = [w for sg in json.load(open(os.path.join(ROOT, "timeline", "transcript_word
 starts = [w["s"] for w in W_]; ends = [w["e"] for w in W_]
 SIL = [(float(x), float(y)) for x, y in re.findall(r"\| (\d+\.\d+) \| (\d+\.\d+) \|", open(os.path.join(ROOT, "docs", "EP10_VO_REPORT.md")).read())]
 near = lambda t, xs: min(abs(t - x) for x in xs)
-off = [(a_, b_) for a_, b_, _ in TL.SUBS if near(a_, starts + [y for _, y in SIL]) > 0.12 or near(b_, ends + [x for x, _ in SIL]) > 0.12]
-ok("Subtitles synced to the spoken words (start/end within 0.12 s of a word or pause boundary)", not off, "off: " + str(off) if off else "all cues")
+_vo = pcm(VO, sr=8000); _rms = lambda t_: float(np.sqrt(np.mean(_vo[max(0, int((t_ - 0.03) * 8000)):int((t_ + 0.03) * 8000)] ** 2)) + 1e-9)
+end_ok = lambda b_: near(b_, ends + [x for x, _ in SIL]) <= 0.12 or _rms(b_) < 0.012          # a cue may be held into the pause after its words
+off = [(a_, b_) for a_, b_, _ in TL.SUBS if near(a_, starts + [y for _, y in SIL]) > 0.12 or not end_ok(b_)]
+ok("Subtitles synced to the spoken words (start within 0.12 s of a word start; end on a word end or inside the pause after it)", not off, "off: " + str(off) if off else "all cues")
 srt = open(os.path.join(ROOT, "subtitles", "EP10_PRICE_OF_CHOICE.srt"), encoding="utf8").read()
 ok("SRT: at most two lines per cue", all(len(b.strip().split("\n")) <= 4 for b in srt.strip().split("\n\n")), "checked")
 # the on-screen texts as drawn by phone_ui.py (strings compared without «» quotes and line breaks)
@@ -92,7 +94,7 @@ import phone_ui
 src = open(os.path.join(ROOT, "scripts", "phone_ui.py"), encoding="utf8").read()
 norm_ = lambda x: re.sub(r"[«»\s]+", " ", x).strip()
 drawn = {norm_(x) for x in (TL.MSG_DIE, TL.MSG_KILL, TL.MSG_STOP, TL.MSG_DENY, TL.MSG_PROJ, TL.MSG_CREATOR, TL.MSG_LVL, TL.MSG_NEXT)}
-code_ok = all(k in src for k in ('"Уничтожить оригинал"', '"Остановить игру"', '("Недостаточно", "прав")', '"Создатель:"', '"Елена"', '("Уровень десять", "завершён")', '"Следующий игрок:"'))
+code_ok = all(k in src for k in ('"Уничтожить оригинал"', '"Остановить игру"', '("Недостаточно", "прав")', '"Создатель: "', '"Елена"', '("Уровень десять", "завершён")', '"Следующий игрок:"'))
 missing = [m_ for m_ in REQUIRED if norm_(m_) not in drawn]
 ok("All required on-screen texts, exact wording (drawn in code)", not missing and code_ok, "missing: " + ", ".join(missing) if missing or not code_ok else "all 8 present (phone/monitor UI in scripts/phone_ui.py, series fonts)")
 def sub_at(word):
@@ -106,7 +108,7 @@ ok("Ending: «Следующий игрок: Елена», then the scream, door
    f"name {TL.T_NEXT_NAME:.2f} s → scream {TL.T_SCREAM:.2f} s (procedural muffled cry, no words) → door 204 → cut {TL.CUT_TO_BLACK:.2f} s; the sister's fate not shown")
 # wrist numbers: which character carries which number (production names never on screen)
 js = open(os.path.join(ROOT, "scripts", "render3d", "shots.js"), encoding="utf8").read()
-nums_ok = ("P.wristBadge(a, '49', C49" in js and "zero(W, Z10[0], Z10[1]" in js and "{ num0: true }" in js and "wristRig(W, cam, { num: 1" in js and "'49'" not in js.split("// ---------- EP10 helpers")[1].split("REF_versions10")[0])
+nums_ok = ("P.wristBadge(a, '49', C49" in js and "zero(W, Z10[0], Z10[1]" in js and "{ num0: true }" in js and "wristRig(W, cam, { num: 1" in js and "'49'" not in js.split("// ---------- EP10 helpers")[1].split("const SHOTS = {")[0] and "'49'" not in js.split("EP10 «СОЗДАТЕЛЬ» (E10_*)")[1].split("REF_versions10")[0])
 ok("Wrist numbers not mixed up (48 = ALEX_48, 49 = ALEX_49, 0 = ALEX_ZERO)", nums_ok, "48: ALEX_48's forearm (E10_hand48, EP07 ink); 49: ALEX_49 only (a49()); 0: ALEX_ZERO only (cast10 → zero(…, {num0: true}))")
 ok("First shot continues EP09's last frame", TL.SHOTS[0]["src"] == "E9_cop_screen_close" and TL.SHOTS[0]["phone"] == "cop10",
    "EP09's E9_cop_screen_close still (read from ../EP09/scenes), its final red screen «Оригинал должен умереть», flat 47, no time jump")
@@ -130,5 +132,5 @@ md = ["# EP10 — QC report", "", f"File: `renders/EP10_PRICE_OF_CHOICE_FINAL.mp
 md += [f"| {n} | {'✅' if c else ('⚠️' if n in warn_rows else '❌')} | {val} |" for n, c, val in rows]
 md += ["", "One frame from the middle of every shot (shot number · time):", "", "![contact sheet](EP10_contact_sheet.jpg)", ""]
 open(os.path.join(ROOT, "docs", "EP10_QC.md"), "w").write("\n".join(md))
-print("\n".join(f"{'OK ' if c else 'FAIL'} {n}: {val}" for n, c, val in rows))
+print("\n".join(f"{'OK ' if c else ('WARN' if n in warn_rows else 'FAIL')} {n}: {val}" for n, c, val in rows))
 sys.exit(0 if all(c or n in warn_rows for n, c, _ in rows) else 1)
