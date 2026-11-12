@@ -614,12 +614,12 @@ def draw_rain(frame, t, fi):
 def draw_static(frame, t, shot):
     """the recording breaks off: full-frame noise and a white line collapsing, then black with sparse noise"""
     a = t - shot["t"][0]; rg = np.random.default_rng(int(t * 30) + 11)
-    if a < 0.45:
+    if a < 0.3:
         n = rg.integers(0, 255, (OH // 4, OW // 4), dtype=np.uint8); im = Image.fromarray(n).resize((OW, OH), Image.NEAREST).convert("RGBA")
         im.putalpha(int(255 * (1 - a / 0.45 * 0.6))); frame.alpha_composite(im)
     d = ImageDraw.Draw(frame)
-    if 0.3 <= a < 0.6:
-        k = (a - 0.3) / 0.3; hh = max(3, int(OH * 0.04 * (1 - k))); ww = int(OW * (1 - k ** 2 * 0.95))
+    if 0.25 <= a < 0.5:
+        k = (a - 0.25) / 0.25; hh = max(3, int(OH * 0.04 * (1 - k))); ww = int(OW * (1 - k ** 2 * 0.95))
         d.rectangle([OW // 2 - ww // 2, OH // 2 - hh // 2, OW // 2 + ww // 2, OH // 2 + hh // 2], fill=(235, 245, 255, 255))
     if a >= 0.6:
         for _ in range(60):

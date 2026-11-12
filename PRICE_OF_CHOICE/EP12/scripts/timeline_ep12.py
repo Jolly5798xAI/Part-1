@@ -83,9 +83,9 @@ SHOTS = [
     dict(t=(32.00, 33.85), src="E12_ahead", anim=(0.0, 1.0), sub="bottom", cam=((.5, .5, 1.0), (.5, .5, 1.1)), fx=["rec", "rain", "drive"]),
     dict(t=(33.85, 35.10), src="E12_brake", anim=(0.0, 1.0), anim_start=33.95, anim_dur=0.55, sub="bottom", cam=((.5, .5, 1.0), (.5, .5, 1.06)), fx=["rec", "shake_hits"]),
     dict(t=(35.10, 37.55), src="E12_skid", anim=(0.0, 1.0), sub="bottom", cam=((.5, .5, 1.0), (.5, .5, 1.08)), fx=["rec", "rain", "handshake"]),
-    dict(t=(37.55, 38.70), src="BLACK", sub="bottom", fx=["static"]),
+    dict(t=(37.55, 38.05), src="BLACK", sub="bottom", fx=["static"]),
     # --- 5. «КТО ОТПРАВИЛ СООБЩЕНИЕ?» — SHE SAYS NOTHING — THE ORIGINAL SMIRKS — «А ТЕПЕРЬ ПОКАЖИ ЕМУ ОСТАЛЬНОЕ»
-    dict(t=(38.70, 40.60), src="E12_sis_down", sub="bottom", cam=((.5, .42, 1.0), (.5, .42, 1.1)), fx=["redglow"]),
+    dict(t=(38.05, 40.60), src="E12_sis_down", sub="bottom", cam=((.5, .42, 1.0), (.5, .42, 1.1)), fx=["redglow"]),
     dict(t=(40.60, 42.45), src="LIPSYNC", lips="E12_a48", sub="bottom", cam=((.5, .42, 1.08), (.5, .42, 1.18)), fx=["handshake"]),
     dict(t=(42.45, 43.55), src="E12_sis_down", sub="bottom", cam=((.5, .4, 1.14), (.5, .4, 1.2)), fx=["redglow"]),
     dict(t=(43.55, 45.95), src="E11_face_close", monitor="face12", sub="top", cam=((.5, .46, 1.0), (.5, .46, 1.12))),
