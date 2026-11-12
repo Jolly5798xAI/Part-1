@@ -212,7 +212,7 @@
    ],
    "src": "E11_mon",
    "monitor": "choice11",
-   "sub": "bottom",
+   "sub": "top",
    "cam": [
     [
      0.5,
@@ -233,7 +233,7 @@
    ],
    "src": "E11_mon_close",
    "monitor": "choice11",
-   "sub": "bottom",
+   "sub": "top",
    "cam": [
     [
      0.5,
@@ -254,7 +254,7 @@
    ],
    "src": "E11_mon_close",
    "monitor": "choice11",
-   "sub": "bottom",
+   "sub": "top",
    "cam": [
     [
      0.5,
@@ -599,7 +599,7 @@
    ],
    "src": "E11_mon",
    "monitor": "zero11",
-   "sub": "bottom",
+   "sub": "top",
    "cam": [
     [
      0.5,
@@ -623,7 +623,7 @@
    ],
    "src": "E11_mon_red",
    "monitor": "zero11",
-   "sub": "bottom",
+   "sub": "top",
    "cam": [
     [
      0.5,
@@ -647,7 +647,7 @@
    ],
    "src": "E11_mon_red_close",
    "monitor": "zero11",
-   "sub": "bottom",
+   "sub": "top",
    "cam": [
     [
      0.5,
@@ -837,7 +837,7 @@
    "anim_start": 84.34,
    "anim_dur": 1.8100000000000023,
    "monitor": "face11",
-   "sub": "bottom",
+   "sub": "top",
    "cam": [
     [
      0.5,
@@ -858,7 +858,7 @@
    ],
    "src": "E11_face",
    "monitor": "face11",
-   "sub": "bottom",
+   "sub": "top",
    "cam": [
     [
      0.5,
@@ -879,7 +879,7 @@
    ],
    "src": "E11_face_close",
    "monitor": "face11",
-   "sub": "bottom",
+   "sub": "top",
    "cam": [
     [
      0.5,
@@ -900,7 +900,7 @@
    ],
    "src": "E11_face_close",
    "monitor": "face11",
-   "sub": "bottom",
+   "sub": "top",
    "cam": [
     [
      0.5,
@@ -947,7 +947,7 @@
    ],
    "src": "E11_face_close",
    "monitor": "face11",
-   "sub": "bottom",
+   "sub": "top",
    "cam": [
     [
      0.5,
@@ -968,7 +968,7 @@
    ],
    "src": "E11_face",
    "monitor": "face11",
-   "sub": "bottom",
+   "sub": "top",
    "cam": [
     [
      0.5,
@@ -1012,7 +1012,7 @@
    ],
    "src": "E11_face_close",
    "monitor": "face11",
-   "sub": "bottom",
+   "sub": "top",
    "cam": [
     [
      0.5,
@@ -1033,7 +1033,7 @@
    ],
    "src": "E11_face_close",
    "monitor": "face11",
-   "sub": "bottom",
+   "sub": "top",
    "cam": [
     [
      0.5,

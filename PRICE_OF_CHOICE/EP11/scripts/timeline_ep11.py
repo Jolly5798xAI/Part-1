@@ -60,9 +60,9 @@ SHOTS = [
     # --- 3. THE SISTER, CHAINED — THE SCREEN IN FRONT OF HER — «ВЫБЕРИТЕ, КОГО СОХРАНИТЬ» — «СОЗДАТЕЛЯ ИЛИ ИГРОКА»
     dict(t=(15.00, 17.00), src="E11_room", sub="bottom", cam=((.5, .45, 1.0), (.5, .43, 1.12))),
     dict(t=(17.00, 18.40), src="E11_cuffs", sub="bottom", cam=((.5, .5, 1.0), (.5, .5, 1.1)), fx=["glitch"]),
-    dict(t=(18.40, 20.30), src="E11_mon", monitor="choice11", sub="bottom", cam=((.5, .45, 1.0), (.5, .45, 1.08))),
-    dict(t=(20.30, 22.35), src="E11_mon_close", monitor="choice11", sub="bottom", cam=((.5, .48, 1.0), (.5, .48, 1.06))),
-    dict(t=(22.35, 24.90), src="E11_mon_close", monitor="choice11", sub="bottom", cam=((.5, .48, 1.06), (.5, .48, 1.14)), fx=["shake_hits"]),
+    dict(t=(18.40, 20.30), src="E11_mon", monitor="choice11", sub="top", cam=((.5, .45, 1.0), (.5, .45, 1.08))),
+    dict(t=(20.30, 22.35), src="E11_mon_close", monitor="choice11", sub="top", cam=((.5, .48, 1.0), (.5, .48, 1.06))),
+    dict(t=(22.35, 24.90), src="E11_mon_close", monitor="choice11", sub="top", cam=((.5, .48, 1.06), (.5, .48, 1.14)), fx=["shake_hits"]),
     # --- 4. «АЛЕКС. Я НЕ СОЗДАВАЛА ЭТУ ИГРУ» — «НО НА ЭКРАНЕ БЫЛО ТВОЁ ИМЯ» — «Я СОЗДАЛА ТОЛЬКО КОПИИ, ЧТОБЫ СПАСТИ ТЕБЯ»
     dict(t=(24.90, 26.95), src="E11_sis_look", sub="bottom", cam=((.5, .42, 1.0), (.5, .42, 1.1))),
     dict(t=(26.95, 29.85), src="LIPSYNC", lips="E11_sis", sub="bottom", cam=((.5, .42, 1.06), (.5, .42, 1.16))),
@@ -81,9 +81,9 @@ SHOTS = [
     dict(t=(55.40, 58.95), src="LIPSYNC", lips="E11_a48", sub="bottom", cam=((.5, .42, 1.08), (.5, .41, 1.2))),
     dict(t=(58.95, 60.90), src="E11_nod", anim=(0.0, 1.0), anim_start=59.6, anim_dur=0.95, sub="bottom", cam=((.5, .42, 1.06), (.5, .42, 1.12))),
     # --- 7. THE SCREEN GOES RED — «НУЛЕВОЙ УРОВЕНЬ АКТИВИРОВАН» — «УДАЛЕНИЕ ВСЕХ КОПИЙ» — THE OFFICER AND ALEX_49 FALL APART
-    dict(t=(60.90, 63.05), src="E11_mon", monitor="zero11", sub="bottom", cam=((.5, .45, 1.0), (.5, .45, 1.06)), fx=["shake_hits"]),
-    dict(t=(63.05, 65.55), src="E11_mon_red", monitor="zero11", sub="bottom", cam=((.5, .45, 1.0), (.5, .45, 1.08)), fx=["redglow"]),
-    dict(t=(65.55, 67.90), src="E11_mon_red_close", monitor="zero11", sub="bottom", cam=((.5, .48, 1.0), (.5, .48, 1.08)), fx=["shake_hits"]),
+    dict(t=(60.90, 63.05), src="E11_mon", monitor="zero11", sub="top", cam=((.5, .45, 1.0), (.5, .45, 1.06)), fx=["shake_hits"]),
+    dict(t=(63.05, 65.55), src="E11_mon_red", monitor="zero11", sub="top", cam=((.5, .45, 1.0), (.5, .45, 1.08)), fx=["redglow"]),
+    dict(t=(65.55, 67.90), src="E11_mon_red_close", monitor="zero11", sub="top", cam=((.5, .48, 1.0), (.5, .48, 1.08)), fx=["shake_hits"]),
     dict(t=(67.90, 70.50), src="E11_cop_dust", anim=(0.0, 1.0), anim_start=68.1, anim_dur=2.3, sub="bottom", cam=((.5, .45, 1.0), (.5, .45, 1.06)), fx=["glitch", "redglow"]),
     dict(t=(70.50, 74.90), src="E11_a49_dust", anim=(0.0, 1.0), anim_start=70.7, anim_dur=4.0, sub="bottom", cam=((.5, .45, 1.0), (.5, .44, 1.16)), fx=["glitch"]),
     # --- 8. HE LUNGES FOR THE COMPUTER — «НЕ ТРОГАЙ ЕГО!» — «ПОЧЕМУ?» — «ПОТОМУ ЧТО ЭТО НЕ КОМПЬЮТЕР»
@@ -92,17 +92,17 @@ SHOTS = [
     dict(t=(79.60, 80.95), src="LIPSYNC", lips="E11_a48r", sub="bottom", cam=((.5, .42, 1.06), (.5, .42, 1.14)), fx=["handshake"]),
     dict(t=(80.95, 84.20), src="LIPSYNC", lips="E11_sisr", sub="bottom", cam=((.5, .42, 1.14), (.5, .42, 1.26)), fx=["redglow"]),
     # --- 9. THE SCREEN TURNS — HIS FACE, EYES CLOSED — THE EYES OPEN — «ЕЛЕНА, ОТОЙДИ ОТ НЕГО…»
-    dict(t=(84.20, 86.30), src="E11_turn", anim=(0.0, 1.0), anim_start=T_TURN0, anim_dur=T_TURN1 - T_TURN0, monitor="face11", sub="bottom", cam=((.5, .45, 1.0), (.5, .45, 1.06))),
-    dict(t=(86.30, 88.30), src="E11_face", monitor="face11", sub="bottom", cam=((.5, .45, 1.0), (.5, .45, 1.08))),
-    dict(t=(88.30, 90.70), src="E11_face_close", monitor="face11", sub="bottom", cam=((.5, .46, 1.0), (.5, .46, 1.1))),
-    dict(t=(90.70, 92.40), src="E11_face_close", monitor="face11", sub="bottom", cam=((.5, .44, 1.18), (.5, .44, 1.3)), fx=["shake_hits"]),
+    dict(t=(84.20, 86.30), src="E11_turn", anim=(0.0, 1.0), anim_start=T_TURN0, anim_dur=T_TURN1 - T_TURN0, monitor="face11", sub="top", cam=((.5, .45, 1.0), (.5, .45, 1.06))),
+    dict(t=(86.30, 88.30), src="E11_face", monitor="face11", sub="top", cam=((.5, .45, 1.0), (.5, .45, 1.08))),
+    dict(t=(88.30, 90.70), src="E11_face_close", monitor="face11", sub="top", cam=((.5, .46, 1.0), (.5, .46, 1.1))),
+    dict(t=(90.70, 92.40), src="E11_face_close", monitor="face11", sub="top", cam=((.5, .44, 1.18), (.5, .44, 1.3)), fx=["shake_hits"]),
     dict(t=(92.40, 95.60), src="E11_a48_lit", sub="bottom", cam=((.5, .42, 1.0), (.5, .42, 1.14)), fx=["handshake"]),
-    dict(t=(95.60, 97.85), src="E11_face_close", monitor="face11", sub="bottom", cam=((.5, .46, 1.04), (.5, .46, 1.14))),
-    dict(t=(97.85, 100.90), src="E11_face", monitor="face11", sub="bottom", cam=((.5, .45, 1.04), (.5, .45, 1.16))),
+    dict(t=(95.60, 97.85), src="E11_face_close", monitor="face11", sub="top", cam=((.5, .46, 1.04), (.5, .46, 1.14))),
+    dict(t=(97.85, 100.90), src="E11_face", monitor="face11", sub="top", cam=((.5, .45, 1.04), (.5, .45, 1.16))),
     # --- 10. THE SISTER, AFRAID — «ПОДКЛЮЧЕНИЕ К ОРИГИНАЛУ УСТАНОВЛЕНО» — «ОРИГИНАЛ ПРОСНУЛСЯ» — END ON THE LAST WORD
     dict(t=(100.90, 103.50), src="E11_sis_fear", sub="bottom", cam=((.5, .42, 1.0), (.5, .42, 1.12)), fx=["redglow"]),
-    dict(t=(103.50, 106.80), src="E11_face_close", monitor="face11", sub="bottom", cam=((.5, .46, 1.0), (.5, .46, 1.1))),
-    dict(t=(106.80, END), src="E11_face_close", monitor="face11", sub="bottom", cam=((.5, .46, 1.12), (.5, .46, 1.2)), fx=["shake_hits"]),
+    dict(t=(103.50, 106.80), src="E11_face_close", monitor="face11", sub="top", cam=((.5, .46, 1.0), (.5, .46, 1.1))),
+    dict(t=(106.80, END), src="E11_face_close", monitor="face11", sub="top", cam=((.5, .46, 1.12), (.5, .46, 1.2)), fx=["shake_hits"]),
 ]
 
 # ---------------------------------------------------------------- lip-sync windows (3D stills) + the original's face on the screen (UI)
