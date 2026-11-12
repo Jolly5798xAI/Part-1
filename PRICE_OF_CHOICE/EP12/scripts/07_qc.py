@@ -47,9 +47,10 @@ ok("Full decode without errors (playback test)", dec.returncode == 0 and not dec
 bd = run(["ffmpeg", "-hide_banner", "-nostats", "-i", MP4, "-vf", "blackdetect=d=0.1:pic_th=0.98:pix_th=0.06", "-an", "-f", "null", "-"]).stderr
 blacks = [(float(s), float(e)) for s, e in re.findall(r"black_start:([\d.]+) black_end:([\d.]+)", bd)]
 BO = getattr(TL, "BLACKOUT", None)   # EP05: the scripted blackout («Свет погас») is the only black allowed before the cut
-intended = lambda s_, e_: False                                   # EP12: no black at all (the file ends on the last word)
+ST = next(x["t"] for x in TL.SHOTS if x["src"] == "BLACK")      # EP12: the recording switching off — a white line collapsing on black (0.15 s), not an empty frame
+intended = lambda s_, e_: ST[0] - 0.05 <= s_ and e_ <= ST[1] + 0.05 and e_ - s_ <= 0.25
 bad = [b for b in blacks if not intended(*b)]
-ok("No black frames", not bad, f"black: {', '.join(f'{s:.2f}–{e:.2f}' for s, e in blacks) or 'none'}")
+ok("No empty/black frames (except the 0.15 s TV switch-off line at «Запись оборвалась»)", not bad, f"black: {', '.join(f'{s:.2f}–{e:.2f}' for s, e in blacks) or 'none'}")
 fz = run(["ffmpeg", "-hide_banner", "-nostats", "-i", MP4, "-vf", "freezedetect=n=0.0005:d=2.5", "-an", "-f", "null", "-"]).stderr
 freezes = re.findall(r"freeze_start: ([\d.]+)", fz)
 fr_bad = [float(f) for f in freezes if float(f) < TL.CUT_TO_BLACK - 0.1]
